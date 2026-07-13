@@ -35,17 +35,19 @@ El proyecto original fue realizado en equipo utilizando **Python, Django y SQLit
 
 La versión actual, denominada **CineGest**, toma dicho trabajo como base de inspiración y tiene como objetivo transformarlo en una solución más profesional mediante mejoras en arquitectura, experiencia de usuario, seguridad, validaciones, base de datos, reportes y nuevas funcionalidades.
 
+Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](https://github.com/MDGreenCode/GestionVideoClub)
+
 ---
 
 # 👥 Equipo del Proyecto Académico Original
 
 | Integrante | Matrícula |
 |------------|-----------|
+| Carlos Jesús Bobea Mejía | A00091229 |
+| Mario David Pichardo Vásquez | A00114273 |
 | Francis Jairo Matías Rosario | A00115261 |
 | Pieranyela José Carrasco Rodríguez | A00116415 |
 | Jenrry Monegro Rosario | A00116621 |
-| Carlos Jesús Bobea Mejía | A00091229 |
-| Mario David Pichardo Vásquez | A00114273 |
 
 El proyecto académico original fue desarrollado por el equipo anterior. **Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
 
@@ -240,7 +242,7 @@ CineGest
 ## 1️⃣ Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU-USUARIO/CineGest.git
+git clone https://github.com/Jairo0811/CineGest.git
 ```
 
 ## 2️⃣ Entrar al proyecto
@@ -457,6 +459,7 @@ La base de datos se encuentra configurada en `VideoClub/settings.py`. La migraci
 - **Profesor de la asignatura:** Omar de la Cruz
 - **Referencia académica:** listado de proyectos propuestos por el profesor Juan Pablo Valdez Reyes
 - **Desarrollador principal del proyecto académico original:** Mario David Pichardo Vásquez
+- **Repositorio del proyecto académico original:** [MDGreenCode/GestionVideoClub](https://github.com/MDGreenCode/GestionVideoClub)
 - **Evolución y mantenimiento de CineGest:** Francis Jairo Matías Rosario
 
 ---
