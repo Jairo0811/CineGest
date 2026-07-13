@@ -49,7 +49,9 @@ Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](htt
 | Pieranyela José Carrasco Rodríguez | A00116415 |
 | Jenrry Monegro Rosario | A00116621 |
 
-El proyecto académico original fue desarrollado por el equipo anterior. **Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
+El proyecto académico original fue desarrollado por el equipo anterior. 
+
+**Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
 
 ---
 
