@@ -55,25 +55,53 @@ El proyecto académico original fue desarrollado por el equipo anterior.
 
 ---
 
-# 🛠️ Tecnologías Utilizadas
+# 🛠️ Stack tecnológico
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=python,django,html,css,bootstrap,vscode,git,github" />
+## 🎨 Frontend y diseño de interfaces
+
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,bootstrap" alt="HTML, CSS y Bootstrap" />
 </p>
 
-| Tecnología | Descripción |
-|------------|-------------|
-| 🐍 Python | Lenguaje principal |
-| 🎯 Django | Framework web |
-| 🌐 HTML5 | Estructura de la interfaz |
-| 🎨 CSS3 | Diseño y estilos |
-| 🅱️ Bootstrap 5 | Componentes responsivos previstos para la modernización |
-| ⚙️ Django ORM | Acceso y persistencia de datos |
-| 💾 SQLite | Base de datos actual |
-| 🛢️ Microsoft SQL Server | Base de datos planificada |
-| 🔀 Git | Control de versiones |
-| 🐙 GitHub | Hospedaje privado del repositorio |
-| 💻 Visual Studio Code | Entorno de desarrollo |
+- **HTML5:** estructura semántica de las vistas.
+- **CSS3:** estilos y personalización visual.
+- **Bootstrap 5:** componentes responsivos previstos para la modernización.
+- **Django Templates:** renderizado de las interfaces del lado del servidor.
+
+## ⚙️ Backend, framework y lógica de aplicación
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,django" alt="Python y Django" />
+</p>
+
+- **Python:** lenguaje principal del proyecto.
+- **Django 5.2.15:** framework web.
+- **Django Views:** procesamiento de solicitudes y respuestas.
+- **Django Forms:** formularios y validaciones.
+- **Django ORM:** acceso y persistencia de datos.
+- **Arquitectura MVT:** separación entre modelos, vistas y plantillas.
+
+## 🗄️ Base de datos y persistencia
+
+<p>
+  <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" />
+</p>
+
+- **SQLite:** base de datos utilizada actualmente.
+- **Microsoft SQL Server:** base de datos planificada para la evolución del sistema.
+- **Migraciones de Django:** control de cambios del esquema de datos.
+
+## 🧰 Herramientas de desarrollo
+
+<p>
+  <img src="https://skillicons.dev/icons?i=vscode,git,github" alt="Visual Studio Code, Git y GitHub" />
+</p>
+
+- **Visual Studio Code:** entorno de desarrollo.
+- **Git:** control de versiones.
+- **GitHub:** alojamiento y administración del repositorio.
+- **pip:** gestión de dependencias de Python.
+- **venv:** aislamiento del entorno de desarrollo.
 
 ---
 
@@ -379,7 +407,6 @@ La base de datos se encuentra configurada en `VideoClub/settings.py`. La migraci
 | Exportación a Excel | ❌ | 🚧 |
 | Variables de entorno | ❌ | 🚧 |
 | Auditoría | ❌ | 🚧 |
-| Despliegue en producción | ❌ | 🚧 |
 
 ---
 
