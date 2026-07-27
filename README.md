@@ -1,4 +1,6 @@
-# 🎬 CineGest - Sistema de Gestión para Video Club
+<p align="center">
+  <img src="assets/images/cinegest-logo.png" alt="Logo de CineGest" width="320">
+</p>
 
 <p align="center">
   <strong>La solución inteligente para la gestión de Video Clubs.</strong><br>
