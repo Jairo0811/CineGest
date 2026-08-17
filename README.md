@@ -40,17 +40,27 @@ Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](htt
 
 ---
 
-# 👥 Equipo del Proyecto Académico Original
+## 👥 Equipo Académico Original
 
-| Integrante | Matrícula |
-|------------|-----------|
-| Carlos Jesús Bobea Mejía | A00091229 |
-| Mario David Pichardo Vásquez | A00114273 |
-| Francis Jairo Matías Rosario | A00115261 |
-| Pieranyela José Carrasco Rodríguez | A00116415 |
-| Jenrry Monegro Rosario | A00116621 |
+| 👤 Integrante | 🆔 Matrícula |
+|---|---|
+| 👨🏻‍💻 Carlos Jesús Bobea Mejía | A00091229 |
+| 👨🏻‍💻 Mario David Pichardo Vásquez| A00114273 |
+| 👨🏻‍💻 Francis Jairo Matías Rosario | A00115261 |
+| 👩🏻‍💻 Pieranyela José Carrasco Rodríguez | A00116415 |
+| 👨🏻‍💻 Jenrry Monegro Rosario | A00116621 |
 
-El proyecto académico original fue desarrollado por el equipo anterior.
+
+## 🎓 Información Académica
+
+| Información | Detalle |
+|---|---|
+| 📖 Asignatura | Desarrollo de Software con Tecnologia Open Source 1 (ISO-610) |
+| 👨‍🏫 Profesor | Ing. Omar de la Cruz |
+| 🏫 Institución | Universidad APEC (UNAPEC) |
+| 📅 Período académico | Enero - Abril 2026 |
+| 📁 Tipo de entrega | Proyecto Final |
+
 
 **Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
 
