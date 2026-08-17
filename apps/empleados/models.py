@@ -5,6 +5,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 from apps.core.models import SoftDeleteModel, TimeStampedModel
+from apps.core.validators import normalize_dominican_document, validate_dominican_cedula
 
 
 class Empleado(TimeStampedModel, SoftDeleteModel):
@@ -36,6 +37,15 @@ class Empleado(TimeStampedModel, SoftDeleteModel):
         ordering = ("nombre",)
         verbose_name = "Empleado"
         verbose_name_plural = "Empleados"
+
+    def clean(self) -> None:
+        super().clean()
+        self.cedula = normalize_dominican_document(self.cedula)
+        validate_dominican_cedula(self.cedula)
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return f"{self.nombre} ({self.cedula})"
