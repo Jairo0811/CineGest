@@ -1,0 +1,31 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "1433:1433"
+    volumes:
+      - cinegest_sql_data:/var/opt/mssql
+
+  web:
+    build: .
+    env_file:
+      - .env
+    environment:
+      DATABASE_ENGINE: sqlserver
+      DB_HOST: sqlserver
+      DB_PORT: 1433
+    ports:
+      - "8000:8000"
+    depends_on:
+      - sqlserver
+    command: >
+      sh -c "python scripts/wait_for_db.py &&
+             python manage.py migrate --noinput &&
+             python manage.py collectstatic --noinput &&
+             gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 60"
+
+volumes:
+  cinegest_sql_data:

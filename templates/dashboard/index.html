@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard | CineGest{% endblock %}
+{% block content %}
+<h1 class="h3 mb-1">Dashboard ejecutivo</h1>
+<p class="text-secondary mb-4">Resumen operativo de CineGest.</p>
+<div class="row g-3 mb-4">
+  <div class="col-md-4 col-xl-2"><div class="card h-100 shadow-sm"><div class="card-body"><small>Clientes</small><div class="display-6">{{ clientes_activos }}</div></div></div></div>
+  <div class="col-md-4 col-xl-2"><div class="card h-100 shadow-sm"><div class="card-body"><small>Empleados</small><div class="display-6">{{ empleados_activos }}</div></div></div></div>
+  <div class="col-md-4 col-xl-2"><div class="card h-100 shadow-sm"><div class="card-body"><small>Artículos</small><div class="display-6">{{ articulos_activos }}</div></div></div></div>
+  <div class="col-md-4 col-xl-2"><div class="card h-100 shadow-sm"><div class="card-body"><small>Disponibles</small><div class="display-6">{{ unidades_disponibles }}</div></div></div></div>
+  <div class="col-md-4 col-xl-2"><div class="card h-100 shadow-sm"><div class="card-body"><small>Rentas abiertas</small><div class="display-6">{{ rentas_abiertas }}</div></div></div></div>
+  <div class="col-md-4 col-xl-2"><div class="card h-100 shadow-sm"><div class="card-body"><small>Recargos</small><div class="h4 mt-2">RD$ {{ recargos_acumulados|floatformat:2 }}</div></div></div></div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-8"><div class="card shadow-sm"><div class="card-header fw-semibold">Últimas rentas</div><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>#</th><th>Cliente</th><th>Empleado</th><th>Estado</th><th>Total</th></tr></thead><tbody>{% for renta in ultimas_rentas %}<tr><td>{{ renta.id }}</td><td>{{ renta.cliente.nombre }}</td><td>{{ renta.empleado.nombre }}</td><td>{{ renta.get_estado_display }}</td><td>RD$ {{ renta.total|floatformat:2 }}</td></tr>{% empty %}<tr><td colspan="5" class="text-center text-secondary py-4">Aún no hay rentas registradas.</td></tr>{% endfor %}</tbody></table></div></div></div>
+  <div class="col-lg-4"><div class="card shadow-sm"><div class="card-header fw-semibold">Más rentados</div><ul class="list-group list-group-flush">{% for item in articulos_mas_rentados %}<li class="list-group-item d-flex justify-content-between"><span>{{ item.inventario_item__articulo__titulo }}</span><span class="badge text-bg-primary">{{ item.total }}</span></li>{% empty %}<li class="list-group-item text-secondary">Sin datos todavía.</li>{% endfor %}</ul></div></div>
+</div>
+{% endblock %}

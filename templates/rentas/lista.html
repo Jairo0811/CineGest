@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Rentas | CineGest{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+  <div><h1 class="h3 mb-1">Rentas</h1><p class="text-secondary mb-0">Gestión de rentas y devoluciones.</p></div>
+  <a class="btn btn-primary" href="{% url 'rentas:nueva' %}">Nueva renta</a>
+</div>
+<div class="card shadow-sm"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>#</th><th>Fecha</th><th>Cliente</th><th>Empleado</th><th>Estado</th><th>Total</th><th></th></tr></thead><tbody>{% for renta in rentas %}<tr><td>{{ renta.id }}</td><td>{{ renta.fecha_renta|date:'d/m/Y H:i' }}</td><td>{{ renta.cliente.nombre }}</td><td>{{ renta.empleado.nombre }}</td><td>{{ renta.get_estado_display }}</td><td>RD$ {{ renta.total|floatformat:2 }}</td><td><a class="btn btn-sm btn-outline-primary" href="{% url 'rentas:detalle' renta.id %}">Ver</a></td></tr>{% empty %}<tr><td colspan="7" class="text-center py-4 text-secondary">No hay rentas registradas.</td></tr>{% endfor %}</tbody></table></div></div>
+{% endblock %}
