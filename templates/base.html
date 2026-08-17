@@ -4,8 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111827">
+  <meta name="theme-color" content="#071a3d">
+  <meta name="description" content="CineGest - Sistema de gestión para Video Club">
   <title>{% block title %}CineGest{% endblock %}</title>
+  <link rel="icon" type="image/png" href="{% static 'images/cinegest-logo.png' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="{% static 'css/cinegest.css' %}" rel="stylesheet">
@@ -15,25 +17,24 @@
 {% if user.is_authenticated %}
 <div class="cg-shell">
   <aside class="cg-sidebar">
-    <a class="cg-brand" href="{% url 'dashboard:index' %}">
-      <span class="cg-brand-mark"><i class="bi bi-film"></i></span>
-      <span><span class="cg-brand-title">CineGest</span><span class="cg-brand-subtitle">Video Club Management</span></span>
+    <a class="cg-brand" href="{% url 'dashboard:index' %}" aria-label="Ir al dashboard de CineGest">
+      <img class="cg-sidebar-logo" src="{% static 'images/cinegest-logo.png' %}" alt="CineGest">
     </a>
 
     <div class="cg-nav-section">Principal</div>
-    <nav class="cg-nav">
+    <nav class="cg-nav" aria-label="Navegación principal">
       <a class="cg-nav-link {% if request.resolver_match.namespace == 'dashboard' %}active{% endif %}" href="{% url 'dashboard:index' %}"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a>
       <a class="cg-nav-link {% if request.resolver_match.namespace == 'rentas' %}active{% endif %}" href="{% url 'rentas:lista' %}"><i class="bi bi-arrow-left-right"></i><span>Rentas</span></a>
       <a class="cg-nav-link {% if request.resolver_match.namespace == 'reportes' %}active{% endif %}" href="{% url 'reportes:index' %}"><i class="bi bi-bar-chart-fill"></i><span>Reportes</span></a>
     </nav>
 
     <div class="cg-nav-section">Gestión</div>
-    <nav class="cg-nav">
+    <nav class="cg-nav" aria-label="Gestión operativa">
       <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'articulos' %}active{% endif %}" href="{% url 'gestion:lista' 'articulos' %}"><i class="bi bi-collection-play-fill"></i><span>Artículos</span></a>
       <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'inventario' %}active{% endif %}" href="{% url 'gestion:lista' 'inventario' %}"><i class="bi bi-box-seam-fill"></i><span>Inventario</span></a>
       <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'clientes' %}active{% endif %}" href="{% url 'gestion:lista' 'clientes' %}"><i class="bi bi-people-fill"></i><span>Clientes</span></a>
       <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'empleados' %}active{% endif %}" href="{% url 'gestion:lista' 'empleados' %}"><i class="bi bi-person-badge-fill"></i><span>Empleados</span></a>
-      <a class="cg-nav-link" href="/admin/"><i class="bi bi-gear-fill"></i><span>Administración</span></a>
+      {% if user.is_staff %}<a class="cg-nav-link" href="/admin/"><i class="bi bi-gear-fill"></i><span>Administración</span></a>{% endif %}
     </nav>
 
     <div class="cg-sidebar-footer">
@@ -45,7 +46,7 @@
   <div class="cg-main">
     <header class="cg-topbar">
       <div><span class="text-secondary small">CineGest</span><span class="text-secondary small mx-2">/</span><strong class="small">{% block breadcrumb %}Dashboard{% endblock %}</strong></div>
-      <div class="cg-top-actions">{% block top_actions %}{% endblock %}<a class="cg-btn cg-btn-light d-none d-md-inline-flex align-items-center gap-2" href="/admin/"><i class="bi bi-shield-lock"></i> Admin</a></div>
+      <div class="cg-top-actions">{% block top_actions %}{% endblock %}{% if user.is_staff %}<a class="cg-btn cg-btn-light d-none d-md-inline-flex align-items-center gap-2" href="/admin/"><i class="bi bi-shield-lock"></i> Admin</a>{% endif %}</div>
     </header>
 
     <main class="cg-page">
