@@ -31,6 +31,20 @@ jobs:
       - name: Generate migrations for validation
         run: python manage.py makemigrations --noinput
 
+      - name: Show generated migrations
+        run: |
+          find apps -path "*/migrations/*.py" -type f ! -name "__init__.py" -print
+          for file in $(find apps -path "*/migrations/*.py" -type f ! -name "__init__.py"); do
+            echo "===== $file ====="
+            cat "$file"
+          done
+
+      - name: Upload generated migrations
+        uses: actions/upload-artifact@v4
+        with:
+          name: django-migrations
+          path: apps/**/migrations/*.py
+
       - name: Apply migrations
         run: python manage.py migrate --noinput
 
