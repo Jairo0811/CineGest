@@ -8,7 +8,7 @@ from apps.core.validators import is_valid_dominican_cedula, normalize_dominican_
 
 class DominicanCedulaValidatorTests(SimpleTestCase):
     def test_normalize_dominican_document_removes_formatting(self):
-        self.assertEqual(normalize_dominican_document("000-0000000-18"), "00000000018")
+        self.assertEqual(normalize_dominican_document("000-0000000-8"), "00000000008")
 
     def test_rejects_invalid_characters(self):
         with self.assertRaises(ValidationError):
