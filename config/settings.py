@@ -3,15 +3,14 @@
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / ".env")
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-dev-only-change-me")
 DEBUG = os.getenv("DJANGO_DEBUG", "True").lower() in {"1", "true", "yes", "on"}
-ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
-    if host.strip()
-]
+ALLOWED_HOSTS = [host.strip() for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if host.strip()]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -66,10 +65,7 @@ if DATABASE_ENGINE == "sqlserver":
             "PORT": os.getenv("DB_PORT", "1433"),
             "OPTIONS": {
                 "driver": os.getenv("DB_DRIVER", "ODBC Driver 18 for SQL Server"),
-                "extra_params": os.getenv(
-                    "DB_EXTRA_PARAMS",
-                    "TrustServerCertificate=yes;Encrypt=yes",
-                ),
+                "extra_params": os.getenv("DB_EXTRA_PARAMS", "TrustServerCertificate=yes;Encrypt=yes"),
             },
         }
     }
@@ -82,22 +78,13 @@ else:
     }
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
 AUTH_USER_MODEL = "accounts.User"
-
 LANGUAGE_CODE = "es-do"
 TIME_ZONE = "America/Santo_Domingo"
 USE_I18N = True
@@ -105,7 +92,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
-
 MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
