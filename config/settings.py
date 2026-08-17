@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "apps.rentas.apps.RentasConfig",
     "apps.dashboard.apps.DashboardConfig",
     "apps.reportes.apps.ReportesConfig",
+    "apps.gestion.apps.GestionConfig",
 ]
 
 MIDDLEWARE = [
