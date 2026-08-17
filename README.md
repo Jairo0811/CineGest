@@ -102,6 +102,7 @@ Esta relación **no representa continuidad por materias compartidas en ITLA**. F
 | **Pieranyela José Carrasco Rodríguez** | A00116415 | **2019-8767** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
 
 **Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
+
 ---
 
 # 🛠️ Stack tecnológico
