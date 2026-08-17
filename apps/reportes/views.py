@@ -2,8 +2,8 @@ from datetime import datetime
 from decimal import Decimal
 from io import BytesIO
 
-from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.contrib.staticfiles import finders
 from django.http import HttpResponse
 from django.shortcuts import render
 from openpyxl import Workbook
@@ -12,6 +12,7 @@ from reportlab.lib.enums import TA_CENTER
 from reportlab.lib.pagesizes import landscape, letter
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import inch
+from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 from apps.rentas.models import Renta
@@ -88,27 +89,37 @@ def exportar_excel(request):
     return response
 
 
+def _logo_path():
+    """Resuelve el logo usando el sistema de archivos estáticos de Django."""
+    return finders.find("images/cinegest-logo.png")
+
+
 def _dibujar_encabezado_pagina(canvas, doc):
     canvas.saveState()
     page_width, page_height = landscape(letter)
 
-    # Encabezado corporativo.
     canvas.setFillColor(CINEGEST_NAVY)
     canvas.rect(0, page_height - 54, page_width, 54, fill=1, stroke=0)
 
     canvas.setFillColor(CINEGEST_YELLOW)
     canvas.rect(0, page_height - 58, page_width, 4, fill=1, stroke=0)
 
-    logo_path = settings.BASE_DIR / "static" / "images" / "cinegest-logo.png"
-    if logo_path.exists():
+    logo_path = _logo_path()
+    if logo_path:
+        logo = ImageReader(logo_path)
+        image_width, image_height = logo.getSize()
+        max_width = 150
+        max_height = 42
+        scale = min(max_width / image_width, max_height / image_height)
+        draw_width = image_width * scale
+        draw_height = image_height * scale
         canvas.drawImage(
-            str(logo_path),
+            logo,
             doc.leftMargin,
-            page_height - 48,
-            width=145,
-            height=40,
+            page_height - 49,
+            width=draw_width,
+            height=draw_height,
             preserveAspectRatio=True,
-            anchor="w",
             mask="auto",
         )
     else:
@@ -124,7 +135,6 @@ def _dibujar_encabezado_pagina(canvas, doc):
         "Sistema de Gestión para Video Club",
     )
 
-    # Pie de página.
     canvas.setStrokeColor(CINEGEST_BORDER)
     canvas.line(doc.leftMargin, 30, page_width - doc.rightMargin, 30)
 
