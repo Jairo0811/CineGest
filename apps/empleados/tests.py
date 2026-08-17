@@ -8,7 +8,7 @@ from apps.empleados.models import Empleado
 
 class EmpleadoCedulaValidationTests(TestCase):
     def test_empleado_normaliza_y_acepta_cedula_valida(self):
-        empleado = Empleado(nombre="Empleado Prueba", cedula="000-0000000-18", fecha_ingreso=date(2026, 1, 1))
+        empleado = Empleado(nombre="Empleado Prueba", cedula="000-0000001-8", fecha_ingreso=date(2026, 1, 1))
 
         empleado.save()
 
