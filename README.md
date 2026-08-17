@@ -1,383 +1,276 @@
 <p align="center">
   <img src="docs/images/cinegest-logo.png" alt="Logo de CineGest" width="720">
-  
-</p>
-<p align="center">
-    <img src="https://img.shields.io/badge/UNAPEC-ISO--610-003B70?style=for-the-badge" alt="UNAPEC ISO-610">
-</p>
-
-
-
-<p align="center">
-  <strong>La solución inteligente para la gestión de Video Clubs.</strong><br>
-  Proyecto web profesional en evolución, desarrollado con Python y Django.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Estado-En%20desarrollo-yellow" alt="Estado del proyecto" />
-  <img src="https://img.shields.io/badge/Django-5.2.15-092E20?logo=django&logoColor=white" alt="Django 5.2.15" />
-  <img src="https://img.shields.io/badge/Python-3.13-3776AB?logo=python&logoColor=white" alt="Python 3.13" />
-  <img src="https://img.shields.io/badge/Licencia-Pendiente-lightgrey" alt="Licencia pendiente" />
+  <img src="https://img.shields.io/badge/UNAPEC-ISO--610-003B70?style=for-the-badge" alt="UNAPEC ISO-610">
+</p>
+
+<p align="center">
+  <strong>Sistema web moderno para la gestión integral de un Video Club.</strong><br>
+  Clientes, empleados, artículos, inventario, rentas, devoluciones, reportes y administración centralizada.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Estado-Validación%20v1.0.0-FFC400?style=flat-square&logo=github" alt="Estado" />
+  <img src="https://img.shields.io/badge/Django-5.2.15-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/SQL%20Server-Preparado-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
 </p>
 
 ---
 
 # 📖 Descripción
 
-**CineGest** es una nueva versión profesional de un sistema académico de gestión para Video Club.
+**CineGest** es un sistema web para administrar las operaciones principales de un Video Club desde una interfaz centralizada.
 
-La aplicación será desarrollada desde cero con una arquitectura modular en Django y tendrá como objetivo centralizar la administración de catálogos, artículos, clientes, empleados, rentas, devoluciones, reportes y seguridad del sistema.
+La versión actual fue reconstruida con **Python y Django** sobre una arquitectura modular, incorporando una interfaz propia con identidad visual azul y amarilla, autenticación, inventario por unidades, rentas con múltiples artículos, devoluciones parciales o totales, recargos, reportes PDF/Excel y preparación para Microsoft SQL Server y despliegue con Docker.
 
-El proyecto se encuentra actualmente en su fase inicial de preparación técnica. La estructura base de Django, el control de versiones, la documentación principal y la organización inicial del repositorio ya están configurados.
-
-**CineGest** forma parte de una colección de proyectos académicos desarrollados en la **Universidad APEC (UNAPEC)**, tomando como referencia el listado de proyectos propuestos por el profesor **Juan Pablo Valdez Reyes**.
+El sistema mantiene el **Django Admin** como consola técnica para tareas avanzadas, mientras que las operaciones habituales se realizan desde las pantallas propias de CineGest.
 
 ---
 
-# 🎓 Origen del Proyecto
+# 🎓 Origen académico
 
-La versión académica original fue desarrollada durante el **primer cuatrimestre de 2026** como proyecto final de la asignatura **Desarrollo de Software con Tecnología Open Source I (ISO-610)**, impartida por el profesor **Omar de la Cruz** en la **Universidad APEC (UNAPEC)**.
+CineGest forma parte de una colección de proyectos académicos desarrollados en la **Universidad APEC (UNAPEC)**, tomando como referencia el listado de proyectos propuestos por el profesor **Juan Pablo Valdez Reyes**.
 
-El proyecto original fue realizado en equipo utilizando **Python, Django y SQLite**.
+La versión académica original fue realizada durante el **primer cuatrimestre de 2026** para la asignatura **Desarrollo de Software con Tecnología Open Source I (ISO-610)**, impartida por el profesor **Ing. Omar Antonio De Jesús De La Cruz González**.
 
-La versión actual, denominada **CineGest**, utiliza dicho proyecto como referencia funcional y académica, pero será reconstruida desde cero con una arquitectura, una base de código y una identidad propias.
+Repositorio académico original: **[MDGreenCode/GestionVideoClub](https://github.com/MDGreenCode/GestionVideoClub)**.
 
-Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](https://github.com/MDGreenCode/GestionVideoClub)
+## 👥 Equipo académico original
 
----
-
-## 👥 Equipo Académico Original
-
-| 👤 Integrante | 🆔 Matrícula |
+| Integrante | Matrícula |
 |---|---|
-| 👨🏻‍💻 Carlos Jesús Bobea Mejía | A00091229 |
-| 👨🏻‍💻 Mario David Pichardo Vásquez| A00114273 |
-| 👨🏻‍💻 Francis Jairo Matías Rosario | A00115261 |
-| 👩🏻‍💻 Pieranyela José Carrasco Rodríguez | A00116415 |
-| 👨🏻‍💻 Jenrry Monegro Rosario | A00116621 |
+| Carlos Jesús Bobea Mejía | A00091229 |
+| Mario David Pichardo Vásquez | A00114273 |
+| Francis Jairo Matías Rosario | A00115261 |
+| Pieranyela José Carrasco Rodríguez | A00116415 |
+| Jenrry Monegro Rosario | A00116621 |
 
+**Mario David Pichardo Vásquez** fue el principal creador y desarrollador del proyecto académico original que sirve como referencia para esta evolución.
 
-## 🎓 Información Académica
+## 🎓 Información académica
 
 | Información | Detalle |
 |---|---|
-| 📖 Asignatura | Desarrollo de Software con Tecnologia Open Source 1 (ISO-610) |
-| 👨‍🏫 Profesor | Ing. Omar Antonio De Jesus De La Cruz Gonzalez |
+| 📖 Asignatura | Desarrollo de Software con Tecnología Open Source I (ISO-610) |
+| 👨‍🏫 Profesor | Ing. Omar Antonio De Jesús De La Cruz González |
 | 🏫 Institución | Universidad APEC (UNAPEC) |
 | 📅 Período académico | Enero - Abril 2026 |
 | 📁 Tipo de entrega | Proyecto Final |
-
-## 🧭 Continuidad académica
-
-**CineGest** documenta su continuidad académica mediante relaciones verificables entre estudiantes y profesores. En la colección actual de proyectos de UNAPEC se ha verificado una **continuidad por profesor** con MediCore; no se ha identificado un compañero recurrente de UNAPEC que coincida de forma inequívoca por nombre y matrícula en otro proyecto de la colección.
-
-### 👥 Continuidad por estudiante
-
-No se ha verificado, dentro de los proyectos de UNAPEC actualmente documentados en este portafolio, un integrante de CineGest que vuelva a coincidir con Francis Jairo Matías Rosario en otro equipo académico de UNAPEC por **mismo nombre completo y misma matrícula**.
-
-La ausencia de una coincidencia recurrente no elimina el valor del equipo original; simplemente evita presentar como continuidad directa relaciones que no están verificadas.
-
-### 👨‍🏫 Continuidad por profesor
-
-El profesor **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** impartió durante **Enero - Abril de 2026** dos asignaturas en las que Francis Jairo Matías Rosario participó en proyectos finales distintos: [**MediCore**](https://github.com/Jairo0811/MediCore), correspondiente a **Desarrollo de Software con Tecnología Propietaria 1 (ISO-605)**, y **CineGest**, correspondiente a **Desarrollo de Software con Tecnología Open Source 1 (ISO-610)**.
-
-| Orden | Asignatura | Proyecto | Período | Profesor |
-|---:|---|---|---|---|
-| 1 | Desarrollo de Software con Tecnología Propietaria 1 (ISO-605) | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** |
-| 2 | Desarrollo de Software con Tecnología Open Source 1 (ISO-610) | **CineGest** | Enero - Abril 2026 | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** |
-
-La relación es **académica y formativa**: los proyectos son independientes y la continuidad se fundamenta exclusivamente en el mismo profesor.
-
-### 📚 Línea académica de Juan P. Valdez
-
-CineGest también pertenece a una **línea académica común de enunciados de Proyecto Final elaborados por el profesor Juan P. Valdez en 2020**. El documento original de Video Club identifica explícitamente a **Juan P. Valdez** como profesor y define el problema de negocio que posteriormente sirvió de base para la versión académica y la evolución actual de CineGest.
-
-Dentro de esta colección se han identificado tres enunciados relacionados:
-
-| Orden | Enunciado académico de 2020 | Evolución en el portafolio | Relación con Juan P. Valdez |
-|---:|---|---|---|
-| 1 | Dispensario Médico de UNAPEC | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enunciado de Proyecto Final elaborado por **Juan P. Valdez** |
-| 2 | Sistema de Video Club | **CineGest** | Enunciado de Proyecto Final elaborado por **Juan P. Valdez** |
-| 3 | Sistema de Rentcar | [**RentCarRD**](https://github.com/Jairo0811/RentCarRD) | Enunciado de Proyecto Final elaborado por **Juan P. Valdez** |
-
-Esta relación se documenta como **continuidad por origen del enunciado académico** y es independiente de la continuidad docente de 2026. En CineGest, el profesor efectivo de **ISO-610** fue **Ing. Omar Antonio De Jesus De La Cruz Gonzalez**; Juan P. Valdez corresponde al origen documentado del enunciado académico que inspiró el proyecto.
-
-### 🏫 Cruce institucional ITLA → UNAPEC
-
-CineGest también documenta un cruce institucional entre **ITLA** y **UNAPEC**. Además de Francis Jairo Matías Rosario, tres integrantes del equipo académico original cursaron estudios en el **Instituto Tecnológico de Las Américas (ITLA)** antes de coincidir posteriormente en UNAPEC.
-
-Esta relación **no representa continuidad por materias compartidas en ITLA**. Francis Jairo Matías Rosario no coincidió con Mario David Pichardo Vásquez, Jenrry Monegro Rosario ni Pieranyela José Carrasco Rodríguez en ninguna asignatura durante su etapa en ITLA. El vínculo documentado es una **trayectoria institucional compartida**.
-
-| Integrante | Matrícula UNAPEC | Matrícula ITLA | Relación documentada |
-|---|---|---|---|
-| **Mario David Pichardo Vásquez** | A00114273 | **2015-2935** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
-| **Francis Jairo Matías Rosario** | A00115261 | **2015-2984** | ITLA → UNAPEC |
-| **Jenrry Monegro Rosario** | A00116621 | **2019-8690** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
-| **Pieranyela José Carrasco Rodríguez** | A00116415 | **2019-8767** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
-
-**Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
 
 ---
 
 # 🛠️ Stack tecnológico
 
-## 🎨 Frontend y diseño de interfaces
-
-<p>
-  <img src="https://skillicons.dev/icons?i=html,css,bootstrap" alt="HTML, CSS y Bootstrap" />
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,django,html,css,bootstrap,vscode,git,github,docker&perline=9" />
 </p>
 
-- **HTML5:** estructura semántica de las vistas.
-- **CSS3:** estilos y personalización visual.
-- **Bootstrap 5:** componentes responsivos para la interfaz.
-- **Django Templates:** renderizado del lado del servidor.
-
-## ⚙️ Backend y lógica de aplicación
-
-<p>
-  <img src="https://skillicons.dev/icons?i=python,django" alt="Python y Django" />
-</p>
-
-- **Python 3.13:** lenguaje principal.
-- **Django 5.2.15:** framework web.
-- **Django ORM:** persistencia de datos.
-- **Arquitectura MVT:** organización del proyecto.
-
-## 🗄️ Base de datos y persistencia
-
-<p>
-  <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" />
-</p>
-
-- **SQLite:** motor temporal durante la fase inicial.
-- **Microsoft SQL Server:** motor planificado para la versión profesional.
-- **Migraciones de Django:** control de cambios del esquema.
-
-## 🧰 Herramientas de desarrollo
-
-<p>
-  <img src="https://skillicons.dev/icons?i=vscode,git,github" alt="Visual Studio Code, Git y GitHub" />
-</p>
-
-- **Visual Studio Code:** entorno de desarrollo.
-- **Git:** control de versiones.
-- **GitHub:** alojamiento y administración del repositorio.
-- **pip:** gestión de dependencias.
-- **venv:** aislamiento del entorno local.
+| Tecnología | Uso |
+|---|---|
+| 🐍 Python 3.13 | Lenguaje principal |
+| 🎯 Django 5.2.15 | Framework web |
+| 🧩 Django ORM | Persistencia y modelo de dominio |
+| 🌐 HTML5 | Templates y estructura visual |
+| 🎨 CSS3 | Sistema visual de CineGest |
+| 🅱️ Bootstrap 5 | Componentes responsivos |
+| 💾 SQLite | Base local de desarrollo |
+| 🛢️ Microsoft SQL Server | Base de datos preparada para producción |
+| 🔌 `mssql-django` + `pyodbc` | Conectividad con SQL Server |
+| 📊 OpenPyXL | Exportación a Excel |
+| 📄 ReportLab | Reportes PDF |
+| 📦 WhiteNoise | Archivos estáticos |
+| 🐳 Docker | Entorno reproducible y despliegue |
+| 🔄 GitHub Actions | Integración continua |
 
 ---
 
 # 🏗️ Arquitectura
 
-CineGest se está organizando como una aplicación Django modular:
-
 ```text
 Navegador
-    │
-    ▼
+   │
+   ▼
 Django URLs
-    │
-    ▼
-Views / Use Cases
-    │
-    ▼
-Forms / Services
-    │
-    ▼
-Models / Django ORM
-    │
-    ▼
-SQLite → Microsoft SQL Server
+   │
+   ▼
+Views / Forms / Services
+   │
+   ▼
+Modelos de dominio + Django ORM
+   │
+   ├── SQLite (desarrollo)
+   └── Microsoft SQL Server (objetivo de producción)
 ```
 
-La arquitectura prevista separará responsabilidades por módulos de negocio dentro de `apps/`.
-
-Módulos planificados:
+CineGest sigue el patrón **MVT de Django** y separa responsabilidades por aplicaciones:
 
 ```text
 apps/
-├── core
 ├── accounts
-├── dashboard
+├── articulos
 ├── catalogos
 ├── clientes
+├── core
+├── dashboard
 ├── empleados
-├── articulos
+├── gestion
 ├── rentas
 └── reportes
 ```
 
+Las operaciones críticas de renta y devolución se encapsulan en servicios transaccionales para evitar inconsistencias en inventario.
+
 ---
 
-# 📂 Estructura actual del proyecto
+# ✨ Funcionalidades
+
+## 📊 Dashboard ejecutivo
+- KPIs de clientes, empleados, artículos, disponibilidad, rentas abiertas y recargos.
+- Últimas rentas.
+- Ranking de artículos más rentados.
+- Accesos rápidos a las operaciones principales.
+
+## 👥 Gestión operativa
+- Clientes.
+- Empleados.
+- Artículos.
+- Inventario por unidades físicas.
+- Búsqueda y edición desde la interfaz propia de CineGest.
+
+## 🎬 Catálogos y artículos
+- Tipos de artículos.
+- Géneros.
+- Idiomas.
+- Personas de elenco y participación por artículo.
+- Múltiples géneros y personas de elenco por artículo.
+
+## 🔑 Rentas y devoluciones
+- Rentas con múltiples unidades de inventario.
+- Bloqueo automático de unidades rentadas.
+- Devoluciones parciales y totales.
+- Actualización automática del inventario.
+- Cálculo de recargos por retraso.
+- Historial de operaciones.
+
+## 📄 Reportes
+- Filtros por rango de fechas y estado.
+- Exportación a Excel.
+- Exportación a PDF.
+
+## 🔐 Seguridad
+- Usuario personalizado de Django.
+- Login y logout.
+- Control mediante permisos y grupos.
+- Django Admin reservado para administración técnica.
+- Variables sensibles mediante `.env`.
+- Cookies seguras y HSTS cuando `DEBUG=False`.
+
+---
+
+# 🎨 Identidad visual
+
+La interfaz utiliza la paleta oficial de CineGest inspirada en los colores azul y amarillo del proyecto:
+
+- Azul marino para navegación y superficies de alto contraste.
+- Azul eléctrico como color primario.
+- Amarillo/dorado como color de acento.
+- Blanco para contenido y legibilidad.
+
+El logo de aplicación se encuentra en:
 
 ```text
-CineGest
-│
-├── apps
-│   └── __init__.py
-│
-├── config
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
-│
-├── docs
-├── media
-├── static
-├── templates
+static/images/cinegest-logo.png
+```
+
+---
+
+# 📂 Estructura principal
+
+```text
+CineGest/
+├── .github/workflows/
+├── apps/
+├── config/
+├── docs/
+├── scripts/
+├── static/
+│   ├── css/
+│   └── images/
+├── templates/
+├── .env.example
+├── Dockerfile
+├── docker-compose.yml
 ├── manage.py
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
 ---
 
-# ✅ Estado actual
+# 🚀 Instalación local
 
-| Componente | Estado |
-|------------|:------:|
-| Proyecto Django inicial | ✅ |
-| Repositorio privado en GitHub | ✅ |
-| Archivo `.gitignore` | ✅ |
-| Archivo `requirements.txt` | ✅ |
-| README profesional | ✅ |
-| Estructura modular base | ✅ |
-| Configuración regional | 🔄 |
-| Variables de entorno | ⏳ |
-| Módulo de autenticación | ⏳ |
-| Dashboard | ⏳ |
-| Catálogos | ⏳ |
-| Clientes | ⏳ |
-| Empleados | ⏳ |
-| Artículos | ⏳ |
-| Rentas y devoluciones | ⏳ |
-| Reportes | ⏳ |
-| SQL Server | ⏳ |
-| Interfaz responsiva | ⏳ |
-
-> **Leyenda:** ✅ completado · 🔄 en progreso · ⏳ pendiente
-
----
-
-# 🗺️ Hoja de ruta
-
-## Fase 1 — Preparación técnica
-
-- [x] Crear el proyecto Django.
-- [x] Crear el repositorio privado.
-- [x] Configurar `.gitignore`.
-- [x] Generar `requirements.txt`.
-- [x] Crear la estructura inicial del repositorio.
-- [ ] Configurar variables de entorno.
-- [ ] Ajustar configuración regional y archivos estáticos.
-
-## Fase 2 — Arquitectura y seguridad
-
-- [ ] Crear aplicación `core`.
-- [ ] Crear aplicación `accounts`.
-- [ ] Definir usuario personalizado.
-- [ ] Implementar login, roles y permisos.
-- [ ] Incorporar auditoría y eliminación lógica.
-
-## Fase 3 — Modelo de dominio
-
-- [ ] Diseñar el modelo entidad-relación.
-- [ ] Crear catálogos.
-- [ ] Crear clientes y empleados.
-- [ ] Crear artículos, géneros, idiomas y elenco.
-- [ ] Crear rentas, detalles y devoluciones.
-
-## Fase 4 — Base de datos
-
-- [ ] Configurar Microsoft SQL Server.
-- [ ] Definir restricciones e índices.
-- [ ] Crear migraciones.
-- [ ] Preparar datos iniciales.
-
-## Fase 5 — Interfaz
-
-- [ ] Integrar Bootstrap 5.
-- [ ] Crear layout principal.
-- [ ] Diseñar dashboard.
-- [ ] Añadir búsquedas, filtros y paginación.
-- [ ] Implementar diseño responsivo y modo oscuro.
-
-## Fase 6 — Reportes y producción
-
-- [ ] Reportes por criterios.
-- [ ] Exportación a PDF.
-- [ ] Exportación a Excel.
-- [ ] Pruebas automatizadas.
-- [ ] Documentación técnica.
-- [ ] Preparación para despliegue.
-
----
-
-# 🚀 Instalación
-
-## 1️⃣ Clonar el repositorio
+## 1. Clonar
 
 ```bash
 git clone https://github.com/Jairo0811/CineGest.git
 cd CineGest
 ```
 
-## 2️⃣ Crear el entorno virtual
-
-```powershell
-py -3.13 -m venv .venv
-```
-
-## 3️⃣ Activar el entorno virtual
+## 2. Crear y activar entorno virtual
 
 ### Windows PowerShell
 
 ```powershell
+py -3.13 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-### Windows CMD
+## 3. Instalar dependencias
 
-```cmd
-.venv\Scripts\activate
-```
-
-### Linux o macOS
-
-```bash
-source .venv/bin/activate
-```
-
-## 4️⃣ Instalar dependencias
-
-```bash
-python -m pip install --upgrade pip
+```powershell
 python -m pip install -r requirements.txt
 ```
 
-## 5️⃣ Aplicar migraciones
+## 4. Variables de entorno
 
-```bash
+```powershell
+Copy-Item .env.example .env
+```
+
+Para desarrollo local con SQLite:
+
+```env
+DATABASE_ENGINE=sqlite
+```
+
+## 5. Migraciones
+
+```powershell
 python manage.py migrate
 ```
 
-## 6️⃣ Ejecutar el servidor
+## 6. Crear administrador
 
-```bash
+```powershell
+python manage.py createsuperuser
+```
+
+## 7. Ejecutar
+
+```powershell
 python manage.py runserver
 ```
 
-Aplicación local:
+Aplicación:
 
 ```text
 http://127.0.0.1:8000/
 ```
 
-Panel administrativo:
+Panel técnico:
 
 ```text
 http://127.0.0.1:8000/admin/
@@ -385,51 +278,82 @@ http://127.0.0.1:8000/admin/
 
 ---
 
-# ⚙️ Configuración actual
+# 🛢️ Microsoft SQL Server
 
-```text
-Python 3.13
-Django 5.2.15
-SQLite temporal
+La configuración se controla desde `.env`:
+
+```env
+DATABASE_ENGINE=sqlserver
+DB_NAME=CineGestDb
+DB_USER=sa
+DB_PASSWORD=TU_PASSWORD
+DB_HOST=localhost
+DB_PORT=1433
+DB_DRIVER=ODBC Driver 18 for SQL Server
+DB_EXTRA_PARAMS=TrustServerCertificate=yes;Encrypt=yes
 ```
 
-La configuración principal se encuentra en:
-
-```text
-config/settings.py
-```
-
-La migración a Microsoft SQL Server se realizará después de definir el modelo de dominio.
+La guía detallada está disponible en `docs/sql-server-setup.md`.
 
 ---
 
-# 👨‍💻 Autor y mantenimiento
+# 🧪 Calidad
 
-**Francis Jairo Matías Rosario**
+Validación recomendada antes de integrar cambios:
 
-🎓 Universidad APEC (UNAPEC)
+```powershell
+python manage.py makemigrations --check --dry-run
+python manage.py migrate
+python manage.py check
+python manage.py test
+python manage.py collectstatic --noinput
+```
 
-📚 Ingeniería de Software
-
-🆔 Matrícula: **A00115261**
-
-💼 Evolución y mantenimiento de **CineGest** como proyecto académico y profesional.
+La suite actual incluye pruebas automatizadas para validaciones y flujo de rentas/devoluciones, y GitHub Actions ejecuta las comprobaciones principales en cada cambio relevante.
 
 ---
 
-# 🙏 Créditos
+# 🐳 Docker
 
-- **Universidad:** Universidad APEC (UNAPEC)
-- **Asignatura:** Desarrollo de Software con Tecnología Open Source I
-- **Código:** ISO-610
-- **Profesor de la asignatura:** Omar de la Cruz
-- **Referencia académica:** listado de proyectos propuestos por el profesor Juan Pablo Valdez Reyes
-- **Desarrollador principal del proyecto académico original:** Mario David Pichardo Vásquez
-- **Repositorio académico original:** [MDGreenCode/GestionVideoClub](https://github.com/MDGreenCode/GestionVideoClub)
-- **Evolución y mantenimiento de CineGest:** Francis Jairo Matías Rosario
+```bash
+docker compose up --build
+```
+
+El repositorio incluye configuración de Docker y SQL Server 2022 para preparar entornos reproducibles de despliegue.
+
+---
+
+# 📊 Estado del proyecto
+
+| Área | Estado |
+|---|:---:|
+| Arquitectura modular | ✅ |
+| Autenticación | ✅ |
+| Catálogos | ✅ |
+| Clientes y empleados | ✅ |
+| Artículos, elenco e inventario | ✅ |
+| Rentas y devoluciones | ✅ |
+| Dashboard | ✅ |
+| Reportes PDF/Excel | ✅ |
+| Interfaz propia | ✅ |
+| CI / pruebas | ✅ |
+| Docker | ✅ |
+| Configuración SQL Server | ✅ |
+| Validación física final sobre SQL Server | 🚧 |
+| Release `v1.0.0` | 🚧 |
+
+---
+
+# 👨‍💻 Evolución y mantenimiento
+
+**Francis Jairo Matías Rosario**  
+Universidad APEC (UNAPEC) · Ingeniería de Software  
+Matrícula: **A00115261**
+
+CineGest se mantiene como evolución independiente del trabajo académico original, con objetivos de portafolio profesional y preparación para un posible uso real.
 
 ---
 
 <p align="center">
-  Desarrollado con ❤️ por <strong>Francis Jairo Matías Rosario</strong>
+  Desarrollado con Python, Django y una identidad propia para <strong>CineGest</strong>.
 </p>
