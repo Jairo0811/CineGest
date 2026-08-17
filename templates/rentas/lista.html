@@ -1,9 +1,42 @@
 {% extends 'base.html' %}
 {% block title %}Rentas | CineGest{% endblock %}
+{% block breadcrumb %}Rentas{% endblock %}
+{% block top_actions %}
+<a class="cg-btn cg-btn-primary d-inline-flex align-items-center gap-2" href="{% url 'rentas:nueva' %}"><i class="bi bi-plus-lg"></i>Nueva renta</a>
+{% endblock %}
 {% block content %}
-<div class="d-flex justify-content-between align-items-center mb-4">
-  <div><h1 class="h3 mb-1">Rentas</h1><p class="text-secondary mb-0">Gestión de rentas y devoluciones.</p></div>
-  <a class="btn btn-primary" href="{% url 'rentas:nueva' %}">Nueva renta</a>
+<div class="mb-4">
+  <h1 class="cg-page-title h2">Rentas y devoluciones</h1>
+  <p class="cg-page-subtitle">Gestiona operaciones activas, devoluciones y el historial de clientes.</p>
 </div>
-<div class="card shadow-sm"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>#</th><th>Fecha</th><th>Cliente</th><th>Empleado</th><th>Estado</th><th>Total</th><th></th></tr></thead><tbody>{% for renta in rentas %}<tr><td>{{ renta.id }}</td><td>{{ renta.fecha_renta|date:'d/m/Y H:i' }}</td><td>{{ renta.cliente.nombre }}</td><td>{{ renta.empleado.nombre }}</td><td>{{ renta.get_estado_display }}</td><td>RD$ {{ renta.total|floatformat:2 }}</td><td><a class="btn btn-sm btn-outline-primary" href="{% url 'rentas:detalle' renta.id %}">Ver</a></td></tr>{% empty %}<tr><td colspan="7" class="text-center py-4 text-secondary">No hay rentas registradas.</td></tr>{% endfor %}</tbody></table></div></div>
+
+<section class="cg-panel">
+  <div class="cg-panel-header">
+    <div>
+      <h2 class="cg-panel-title">Historial de rentas</h2>
+      <small class="text-secondary">Todas las operaciones registradas en CineGest</small>
+    </div>
+    <span class="cg-badge cg-badge-blue">{{ rentas|length }} registros</span>
+  </div>
+  <div class="table-responsive">
+    <table class="table cg-table align-middle">
+      <thead><tr><th>#</th><th>Fecha</th><th>Cliente</th><th>Empleado</th><th>Estado</th><th class="text-end">Total</th><th></th></tr></thead>
+      <tbody>
+      {% for renta in rentas %}
+        <tr>
+          <td class="fw-bold">#{{ renta.id }}</td>
+          <td>{{ renta.fecha_renta|date:'d/m/Y H:i' }}</td>
+          <td><div class="fw-semibold">{{ renta.cliente.nombre }}</div></td>
+          <td>{{ renta.empleado.nombre }}</td>
+          <td><span class="cg-badge {% if renta.estado == 'DEVUELTA' %}cg-badge-green{% elif renta.estado == 'ABIERTA' %}cg-badge-blue{% else %}cg-badge-yellow{% endif %}">{{ renta.get_estado_display }}</span></td>
+          <td class="text-end fw-bold">RD$ {{ renta.total|floatformat:2 }}</td>
+          <td class="text-end"><a class="cg-btn cg-btn-light py-2 px-3" href="{% url 'rentas:detalle' renta.id %}"><i class="bi bi-eye me-1"></i>Ver</a></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="7"><div class="cg-empty"><i class="bi bi-arrow-left-right"></i><strong>No hay rentas registradas</strong><div class="small mt-1">Registra la primera renta para comenzar a construir el historial.</div><a class="cg-btn cg-btn-primary d-inline-block mt-3" href="{% url 'rentas:nueva' %}">Crear primera renta</a></div></td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
 {% endblock %}
