@@ -67,19 +67,18 @@ Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](htt
 | 📅 Período académico | Enero - Abril 2026 |
 | 📁 Tipo de entrega | Proyecto Final |
 
-## 🔗 Continuidad académica
+## 🧭 Continuidad académica
 
-CineGest forma parte de una trayectoria académica conectada dentro de los proyectos de UNAPEC documentados en este portafolio.
+**CineGest** forma parte de una continuidad docente compartida con [**MediCore**](https://github.com/Jairo0811/MediCore) dentro de la formación de Ingeniería de Software en la Universidad APEC (UNAPEC). La relación entre ambos proyectos es **académica y formativa**: no existe una dependencia técnica entre las aplicaciones, sino la coincidencia del mismo profesor en dos asignaturas diferentes cursadas durante el mismo período.
 
-| Tipo de continuidad | Coincidencia | Proyecto relacionado |
-|---|---|---|
-| 👨‍🏫 Profesor recurrente | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** | [MediCore](https://github.com/Jairo0811/MediCore) — Desarrollo de Software con Tecnología Propietaria 1 (ISO-605) |
-| 📅 Mismo período académico | **Enero - Abril 2026** | CineGest e ISO-605 fueron cursadas durante el mismo cuatrimestre |
+Durante **Enero - Abril de 2026**, el profesor **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** impartió tanto **Desarrollo de Software con Tecnología Propietaria 1 (ISO-605)** como **Desarrollo de Software con Tecnología Open Source 1 (ISO-610)**, asignaturas en las que Francis Jairo Matías Rosario participó en los proyectos finales MediCore y CineGest respectivamente.
 
-Esto documenta una continuidad docente directa: durante **Enero - Abril de 2026**, Francis Jairo Matías Rosario desarrolló proyectos finales de **ISO-610** y **ISO-605** con el mismo profesor, trabajando en dos líneas complementarias del plan de estudios: tecnología open source y tecnología propietaria.
+| Orden | Código | Asignatura | Proyecto | Período | Vínculo de continuidad |
+|---:|---|---|---|---|---|
+| 1 | ISO-605 | Desarrollo de Software con Tecnología Propietaria 1 | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 | Mismo profesor |
+| 2 | ISO-610 | Desarrollo de Software con Tecnología Open Source 1 | **CineGest** | Enero - Abril 2026 | Mismo profesor |
 
-> Para identificar continuidad entre compañeros se exige coincidencia inequívoca de **nombre y matrícula**. No se infieren relaciones únicamente por similitud de nombres o por una matrícula aislada.
-
+Vistos en conjunto, ambos proyectos documentan una experiencia paralela con el mismo docente en dos líneas complementarias del plan de estudios: **tecnología propietaria** y **tecnología open source**. Cada repositorio conserva su identidad, equipo y alcance académico original, y su relación se documenta exclusivamente como continuidad docente.
 
 **Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
 
