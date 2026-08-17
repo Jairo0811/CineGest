@@ -6,7 +6,7 @@ from apps.clientes.models import Cliente
 
 class ClienteDocumentValidationTests(TestCase):
     def test_persona_fisica_normaliza_y_acepta_cedula_valida(self):
-        cliente = Cliente(nombre="Cliente Prueba", documento="000-0000000-18", tipo_persona=Cliente.TipoPersona.FISICA)
+        cliente = Cliente(nombre="Cliente Prueba", documento="000-0000001-8", tipo_persona=Cliente.TipoPersona.FISICA)
 
         cliente.save()
 
