@@ -26,3 +26,5 @@ jobs:
           git add README.md
           git commit -m "docs: document ITLA to UNAPEC academic cross-reference"
           git push origin HEAD:docs/itla-unapec-cross
+
+# one-time documentation workflow
