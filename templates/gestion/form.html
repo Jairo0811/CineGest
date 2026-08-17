@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}{% if is_edit %}Editar{% else %}Nuevo{% endif %} {{ config.singular }} | CineGest{% endblock %}
+{% block breadcrumb %}{{ config.title }} / {% if is_edit %}Editar{% else %}Nuevo{% endif %}{% endblock %}
+{% block content %}
+<div class="cg-page-heading">
+  <span class="cg-eyebrow">GESTIÓN</span>
+  <h1 class="cg-page-title">{% if is_edit %}Editar{% else %}Nuevo{% endif %} {{ config.singular }}</h1>
+  <p class="cg-page-subtitle">Completa los datos y guarda los cambios.</p>
+</div>
+<div class="row mt-4">
+  <div class="col-xl-8">
+    <div class="cg-panel">
+      <div class="cg-panel-header"><div><h2 class="cg-panel-title mb-1">Información</h2><p class="cg-panel-subtitle mb-0">Los campos marcados por Django son obligatorios.</p></div></div>
+      <form method="post" class="p-4">
+        {% csrf_token %}
+        {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
+        <div class="row g-4">
+          {% for field in form %}
+          <div class="{% if field.name == 'descripcion' or field.name == 'generos' %}col-12{% else %}col-md-6{% endif %}">
+            {% if field.field.widget.input_type == 'checkbox' %}
+            <div class="form-check form-switch mt-4">{{ field }}<label class="form-check-label" for="{{ field.id_for_label }}">{{ field.label }}</label></div>
+            {% else %}
+            <label class="form-label fw-semibold" for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% endif %}
+            {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+            {% for error in field.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+        <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
+          <a class="cg-btn cg-btn-light" href="{% url 'gestion:lista' resource %}">Cancelar</a>
+          <button class="cg-btn cg-btn-primary" type="submit"><i class="bi bi-check2-circle"></i> Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
