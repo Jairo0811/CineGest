@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/cinegest-logo.png" alt="Logo de CineGest" width="320">
+  <img src="docs/images/cinegest-logo.png" alt="Logo de CineGest" width="720">
 </p>
 
 <p align="center">
