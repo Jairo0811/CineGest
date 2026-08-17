@@ -1,15 +1,41 @@
 {% extends 'base.html' %}
 {% block title %}Nueva renta | CineGest{% endblock %}
+{% block breadcrumb %}Rentas / Nueva renta{% endblock %}
 {% block content %}
-<div class="row justify-content-center"><div class="col-lg-8">
-  <div class="card shadow-sm"><div class="card-body p-4">
-    <h1 class="h4 mb-4">Registrar nueva renta</h1>
-    <form method="post">
-      {% csrf_token %}
-      {% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}
-      {% for field in form %}<div class="mb-3"><label class="form-label">{{ field.label }}</label>{{ field }}{% for error in field.errors %}<div class="text-danger small">{{ error }}</div>{% endfor %}</div>{% endfor %}
-      <div class="d-flex justify-content-end gap-2"><a class="btn btn-outline-secondary" href="{% url 'rentas:lista' %}">Cancelar</a><button class="btn btn-primary" type="submit">Registrar renta</button></div>
-    </form>
-  </div></div>
-</div></div>
+<div class="cg-page-heading d-flex justify-content-between align-items-end flex-wrap gap-3">
+  <div>
+    <span class="cg-eyebrow">OPERACIÓN</span>
+    <h1 class="cg-page-title">Registrar nueva renta</h1>
+    <p class="cg-page-subtitle">Selecciona el cliente, empleado y las unidades disponibles para crear la operación.</p>
+  </div>
+  <a class="cg-btn cg-btn-light" href="{% url 'rentas:lista' %}"><i class="bi bi-arrow-left me-1"></i> Volver</a>
+</div>
+
+<div class="cg-panel cg-form-panel mt-4">
+  <div class="cg-panel-header">
+    <div>
+      <h2 class="cg-panel-title mb-1">Datos de la renta</h2>
+      <p class="cg-page-subtitle mb-0">Las unidades seleccionadas quedarán reservadas automáticamente.</p>
+    </div>
+    <span class="cg-badge cg-badge-yellow"><i class="bi bi-lightning-charge-fill me-1"></i> Operación transaccional</span>
+  </div>
+  <form method="post" class="cg-panel-body" novalidate>
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="alert alert-danger border-0 rounded-4">{{ form.non_field_errors }}</div>{% endif %}
+    <div class="cg-form-grid">
+      {% for field in form %}
+      <div class="cg-field {% if field.name == 'items' or field.name == 'comentarios' %}cg-form-wide{% endif %}">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+        {% for error in field.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+    <div class="d-flex justify-content-end gap-2 mt-4 pt-4 border-top">
+      <a class="cg-btn cg-btn-light" href="{% url 'rentas:lista' %}">Cancelar</a>
+      <button class="cg-btn cg-btn-warning" type="submit"><i class="bi bi-check2-circle me-1"></i> Registrar renta</button>
+    </div>
+  </form>
+</div>
 {% endblock %}
