@@ -4,6 +4,7 @@ from django.core.validators import MinValueValidator
 from django.db import models
 
 from apps.core.models import SoftDeleteModel, TimeStampedModel
+from apps.core.validators import normalize_dominican_document, validate_dominican_cedula
 
 
 class Cliente(TimeStampedModel, SoftDeleteModel):
@@ -27,6 +28,17 @@ class Cliente(TimeStampedModel, SoftDeleteModel):
         ordering = ("nombre",)
         verbose_name = "Cliente"
         verbose_name_plural = "Clientes"
+
+    def clean(self) -> None:
+        super().clean()
+        self.documento = normalize_dominican_document(self.documento)
+
+        if self.tipo_persona == self.TipoPersona.FISICA:
+            validate_dominican_cedula(self.documento)
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        return super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return f"{self.nombre} ({self.documento})"
