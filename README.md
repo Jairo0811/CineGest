@@ -81,7 +81,7 @@ La ausencia de una coincidencia recurrente no elimina el valor del equipo origin
 
 El profesor **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** impartió durante **Enero - Abril de 2026** dos asignaturas en las que Francis Jairo Matías Rosario participó en proyectos finales distintos: [**MediCore**](https://github.com/Jairo0811/MediCore), correspondiente a **Desarrollo de Software con Tecnología Propietaria 1 (ISO-605)**, y **CineGest**, correspondiente a **Desarrollo de Software con Tecnología Open Source 1 (ISO-610)**.
 
-| Orden | Asignatura | Proyecto | Período | Profesor recurrente |
+| Orden | Asignatura | Proyecto | Período | Profesor |
 |---:|---|---|---|---|
 | 1 | Desarrollo de Software con Tecnología Propietaria 1 (ISO-605) | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** |
 | 2 | Desarrollo de Software con Tecnología Open Source 1 (ISO-610) | **CineGest** | Enero - Abril 2026 | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** |
