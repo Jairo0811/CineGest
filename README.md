@@ -62,7 +62,7 @@ Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](htt
 | Información | Detalle |
 |---|---|
 | 📖 Asignatura | Desarrollo de Software con Tecnologia Open Source 1 (ISO-610) |
-| 👨‍🏫 Profesor | Ing. Omar de la Cruz |
+| 👨‍🏫 Profesor | Ing. Omar Antonio De Jesus De La Cruz Gonzalez |
 | 🏫 Institución | Universidad APEC (UNAPEC) |
 | 📅 Período académico | Enero - Abril 2026 |
 | 📁 Tipo de entrega | Proyecto Final |
