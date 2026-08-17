@@ -69,22 +69,30 @@ Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](htt
 
 ## 🧭 Continuidad académica
 
-**CineGest** forma parte de una continuidad docente compartida con [**MediCore**](https://github.com/Jairo0811/MediCore) dentro de la formación de Ingeniería de Software en la Universidad APEC (UNAPEC). La relación entre ambos proyectos es **académica y formativa**: no existe una dependencia técnica entre las aplicaciones, sino la coincidencia del mismo profesor en dos asignaturas diferentes cursadas durante el mismo período.
+**CineGest** documenta su continuidad académica mediante relaciones verificables entre estudiantes y profesores. En la colección actual de proyectos de UNAPEC se ha verificado una **continuidad por profesor** con MediCore; no se ha identificado un compañero recurrente de UNAPEC que coincida de forma inequívoca por nombre y matrícula en otro proyecto de la colección.
 
-Durante **Enero - Abril de 2026**, el profesor **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** impartió tanto **Desarrollo de Software con Tecnología Propietaria 1 (ISO-605)** como **Desarrollo de Software con Tecnología Open Source 1 (ISO-610)**, asignaturas en las que Francis Jairo Matías Rosario participó en los proyectos finales MediCore y CineGest respectivamente.
+### 👥 Continuidad por estudiante
 
-| Orden | Código | Asignatura | Proyecto | Período | Vínculo de continuidad |
-|---:|---|---|---|---|---|
-| 1 | ISO-605 | Desarrollo de Software con Tecnología Propietaria 1 | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 | Mismo profesor |
-| 2 | ISO-610 | Desarrollo de Software con Tecnología Open Source 1 | **CineGest** | Enero - Abril 2026 | Mismo profesor |
+No se ha verificado, dentro de los proyectos de UNAPEC actualmente documentados en este portafolio, un integrante de CineGest que vuelva a coincidir con Francis Jairo Matías Rosario en otro equipo académico de UNAPEC por **mismo nombre completo y misma matrícula**.
 
-Vistos en conjunto, ambos proyectos documentan una experiencia paralela con el mismo docente en dos líneas complementarias del plan de estudios: **tecnología propietaria** y **tecnología open source**. Cada repositorio conserva su identidad, equipo y alcance académico original, y su relación se documenta exclusivamente como continuidad docente.
+La ausencia de una coincidencia recurrente no elimina el valor del equipo original; simplemente evita presentar como continuidad directa relaciones que no están verificadas.
+
+### 👨‍🏫 Continuidad por profesor
+
+El profesor **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** impartió durante **Enero - Abril de 2026** dos asignaturas en las que Francis Jairo Matías Rosario participó en proyectos finales distintos: [**MediCore**](https://github.com/Jairo0811/MediCore), correspondiente a **Desarrollo de Software con Tecnología Propietaria 1 (ISO-605)**, y **CineGest**, correspondiente a **Desarrollo de Software con Tecnología Open Source 1 (ISO-610)**.
+
+| Orden | Asignatura | Proyecto | Período | Profesor recurrente |
+|---:|---|---|---|---|
+| 1 | Desarrollo de Software con Tecnología Propietaria 1 (ISO-605) | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** |
+| 2 | Desarrollo de Software con Tecnología Open Source 1 (ISO-610) | **CineGest** | Enero - Abril 2026 | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** |
+
+La relación es **académica y formativa**: los proyectos son independientes y la continuidad se fundamenta exclusivamente en el mismo profesor.
 
 ### 🏫 Cruce institucional ITLA → UNAPEC
 
-CineGest también documenta un cruce institucional particular entre **ITLA** y **UNAPEC**. Además de Francis Jairo Matías Rosario, tres integrantes del equipo académico original de CineGest también cursaron estudios en el **Instituto Tecnológico de Las Américas (ITLA)** antes de coincidir posteriormente en UNAPEC.
+CineGest también documenta un cruce institucional entre **ITLA** y **UNAPEC**. Además de Francis Jairo Matías Rosario, tres integrantes del equipo académico original cursaron estudios en el **Instituto Tecnológico de Las Américas (ITLA)** antes de coincidir posteriormente en UNAPEC.
 
-Esta relación **no representa continuidad por materias compartidas en ITLA**. Francis Jairo Matías Rosario **no coincidió con Mario David Pichardo Vásquez, Pieranyela José Carrasco Rodríguez ni Jenrry Monegro Rosario en ninguna asignatura durante su etapa en ITLA**. El vínculo documentado es exclusivamente una **trayectoria institucional compartida**: estudiantes provenientes del ITLA que posteriormente coincidieron como integrantes del mismo proyecto en UNAPEC.
+Esta relación **no representa continuidad por materias compartidas en ITLA**. Francis Jairo Matías Rosario no coincidió con Mario David Pichardo Vásquez, Jenrry Monegro Rosario ni Pieranyela José Carrasco Rodríguez en ninguna asignatura durante su etapa en ITLA. El vínculo documentado es una **trayectoria institucional compartida**.
 
 | Integrante | Matrícula UNAPEC | Matrícula ITLA | Relación documentada |
 |---|---|---|---|
@@ -92,8 +100,6 @@ Esta relación **no representa continuidad por materias compartidas en ITLA**. F
 | **Francis Jairo Matías Rosario** | A00115261 | **2015-2984** | ITLA → UNAPEC |
 | **Jenrry Monegro Rosario** | A00116621 | **2019-8690** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
 | **Pieranyela José Carrasco Rodríguez** | A00116415 | **2019-8767** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
-
-Este cruce permite documentar una dimensión distinta de la continuidad académica del portafolio: no la repetición de un profesor o compañero dentro de una misma institución, sino la convergencia posterior en UNAPEC de varios estudiantes con formación previa en ITLA. La coincidencia relevante ocurre en **CineGest (ISO-610, Enero - Abril 2026)**, no durante la etapa de Francis Jairo Matías Rosario en ITLA.
 
 **Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
 
