@@ -1,7 +1,50 @@
 {% extends 'base.html' %}
 {% block title %}Renta #{{ renta.id }} | CineGest{% endblock %}
+{% block breadcrumb %}Rentas / #{{ renta.id }}{% endblock %}
+{% block top_actions %}<a class="cg-btn cg-btn-light" href="{% url 'rentas:lista' %}"><i class="bi bi-arrow-left"></i> Volver</a>{% endblock %}
 {% block content %}
-<div class="d-flex justify-content-between align-items-start mb-4"><div><h1 class="h3">Renta #{{ renta.id }}</h1><p class="text-secondary mb-0">{{ renta.cliente.nombre }} · {{ renta.empleado.nombre }}</p></div><span class="badge text-bg-primary fs-6">{{ renta.get_estado_display }}</span></div>
-<div class="card shadow-sm mb-4"><div class="card-body"><div class="row"><div class="col-md-4"><strong>Fecha</strong><div>{{ renta.fecha_renta|date:'d/m/Y H:i' }}</div></div><div class="col-md-4"><strong>Cliente</strong><div>{{ renta.cliente }}</div></div><div class="col-md-4"><strong>Total</strong><div>RD$ {{ renta.total|floatformat:2 }}</div></div></div>{% if renta.comentarios %}<hr><p class="mb-0">{{ renta.comentarios }}</p>{% endif %}</div></div>
-<div class="card shadow-sm"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>Unidad</th><th>Artículo</th><th>Fecha esperada</th><th>Devolución</th><th>Subtotal</th><th>Recargo</th><th></th></tr></thead><tbody>{% for detalle in renta.detalles.all %}<tr><td>{{ detalle.inventario_item.codigo }}</td><td>{{ detalle.inventario_item.articulo.titulo }}</td><td>{{ detalle.fecha_esperada_devolucion|date:'d/m/Y H:i' }}</td><td>{% if detalle.fecha_devolucion %}{{ detalle.fecha_devolucion|date:'d/m/Y H:i' }}{% else %}<span class="text-warning">Pendiente</span>{% endif %}</td><td>RD$ {{ detalle.subtotal|floatformat:2 }}</td><td>RD$ {{ detalle.recargo|floatformat:2 }}</td><td>{% if not detalle.fecha_devolucion %}<form method="post" action="{% url 'rentas:devolver' detalle.id %}">{% csrf_token %}<button class="btn btn-sm btn-success" type="submit">Devolver</button></form>{% endif %}</td></tr>{% endfor %}</tbody></table></div></div>
+<div class="cg-page-heading d-flex justify-content-between align-items-end flex-wrap gap-3">
+  <div>
+    <span class="cg-eyebrow">DETALLE DE OPERACIÓN</span>
+    <h1 class="cg-page-title">Renta #{{ renta.id }}</h1>
+    <p class="cg-page-subtitle">{{ renta.cliente.nombre }} · Gestionada por {{ renta.empleado.nombre }}</p>
+  </div>
+  <span class="cg-badge {% if renta.estado == 'ABIERTA' %}cg-status-open{% elif renta.estado == 'PARCIAL' %}cg-status-partial{% elif renta.estado == 'DEVUELTA' %}cg-status-done{% else %}cg-status-cancelled{% endif %}">{{ renta.get_estado_display }}</span>
+</div>
+
+<div class="cg-summary-strip mt-4">
+  <div class="cg-summary-item"><span class="cg-summary-label">Fecha</span><span class="cg-summary-value">{{ renta.fecha_renta|date:'d/m/Y H:i' }}</span></div>
+  <div class="cg-summary-item"><span class="cg-summary-label">Cliente</span><span class="cg-summary-value">{{ renta.cliente }}</span></div>
+  <div class="cg-summary-item"><span class="cg-summary-label">Empleado</span><span class="cg-summary-value">{{ renta.empleado }}</span></div>
+  <div class="cg-summary-item"><span class="cg-summary-label">Total</span><span class="cg-summary-value">RD$ {{ renta.total|floatformat:2 }}</span></div>
+</div>
+
+{% if renta.comentarios %}<div class="cg-panel mt-4"><div class="cg-panel-body"><span class="cg-summary-label">Comentarios</span><p class="mb-0">{{ renta.comentarios }}</p></div></div>{% endif %}
+
+<div class="cg-panel mt-4">
+  <div class="cg-panel-header">
+    <div><h2 class="cg-panel-title mb-1">Unidades rentadas</h2><p class="cg-page-subtitle mb-0">Control individual de devoluciones y recargos.</p></div>
+    <span class="cg-badge cg-badge-blue">{{ renta.detalles.count }} unidad{{ renta.detalles.count|pluralize:"es" }}</span>
+  </div>
+  <div class="table-responsive">
+    <table class="table cg-table align-middle mb-0">
+      <thead><tr><th>Unidad</th><th>Artículo</th><th>Fecha esperada</th><th>Devolución</th><th>Subtotal</th><th>Recargo</th><th class="text-end">Acción</th></tr></thead>
+      <tbody>
+        {% for detalle in renta.detalles.all %}
+        <tr>
+          <td><strong>{{ detalle.inventario_item.codigo }}</strong></td>
+          <td>{{ detalle.inventario_item.articulo.titulo }}</td>
+          <td>{{ detalle.fecha_esperada_devolucion|date:'d/m/Y H:i' }}</td>
+          <td>{% if detalle.fecha_devolucion %}<span class="cg-badge cg-status-done">{{ detalle.fecha_devolucion|date:'d/m/Y H:i' }}</span>{% else %}<span class="cg-badge cg-status-partial">Pendiente</span>{% endif %}</td>
+          <td>RD$ {{ detalle.subtotal|floatformat:2 }}</td>
+          <td>RD$ {{ detalle.recargo|floatformat:2 }}</td>
+          <td class="text-end">{% if not detalle.fecha_devolucion %}<form method="post" action="{% url 'rentas:devolver' detalle.id %}">{% csrf_token %}<button class="cg-btn cg-btn-warning cg-table-action btn-sm" type="submit"><i class="bi bi-arrow-return-left me-1"></i> Devolver</button></form>{% else %}<i class="bi bi-check-circle-fill text-success"></i>{% endif %}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="7"><div class="cg-empty"><i class="bi bi-inbox"></i><strong>Sin unidades asociadas</strong></div></td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
 {% endblock %}
