@@ -12,6 +12,7 @@
     <a class="navbar-brand fw-bold" href="{% url 'dashboard:index' %}">🎬 CineGest</a>
     {% if user.is_authenticated %}
     <div class="d-flex gap-2">
+      <a class="btn btn-outline-light btn-sm" href="{% url 'rentas:lista' %}">Rentas</a>
       <a class="btn btn-outline-light btn-sm" href="{% url 'reportes:index' %}">Reportes</a>
       <a class="btn btn-warning btn-sm" href="/admin/">Administración</a>
       <form method="post" action="{% url 'accounts:logout' %}">
