@@ -17,70 +17,39 @@
   <aside class="cg-sidebar">
     <a class="cg-brand" href="{% url 'dashboard:index' %}">
       <span class="cg-brand-mark"><i class="bi bi-film"></i></span>
-      <span>
-        <span class="cg-brand-title">CineGest</span>
-        <span class="cg-brand-subtitle">Video Club Management</span>
-      </span>
+      <span><span class="cg-brand-title">CineGest</span><span class="cg-brand-subtitle">Video Club Management</span></span>
     </a>
 
     <div class="cg-nav-section">Principal</div>
     <nav class="cg-nav">
-      <a class="cg-nav-link {% if request.resolver_match.namespace == 'dashboard' %}active{% endif %}" href="{% url 'dashboard:index' %}">
-        <i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span>
-      </a>
-      <a class="cg-nav-link {% if request.resolver_match.namespace == 'rentas' %}active{% endif %}" href="{% url 'rentas:lista' %}">
-        <i class="bi bi-arrow-left-right"></i><span>Rentas</span>
-      </a>
-      <a class="cg-nav-link {% if request.resolver_match.namespace == 'reportes' %}active{% endif %}" href="{% url 'reportes:index' %}">
-        <i class="bi bi-bar-chart-fill"></i><span>Reportes</span>
-      </a>
+      <a class="cg-nav-link {% if request.resolver_match.namespace == 'dashboard' %}active{% endif %}" href="{% url 'dashboard:index' %}"><i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span></a>
+      <a class="cg-nav-link {% if request.resolver_match.namespace == 'rentas' %}active{% endif %}" href="{% url 'rentas:lista' %}"><i class="bi bi-arrow-left-right"></i><span>Rentas</span></a>
+      <a class="cg-nav-link {% if request.resolver_match.namespace == 'reportes' %}active{% endif %}" href="{% url 'reportes:index' %}"><i class="bi bi-bar-chart-fill"></i><span>Reportes</span></a>
     </nav>
 
     <div class="cg-nav-section">Gestión</div>
     <nav class="cg-nav">
-      <a class="cg-nav-link" href="/admin/articulos/articulo/"><i class="bi bi-collection-play-fill"></i><span>Artículos</span></a>
-      <a class="cg-nav-link" href="/admin/articulos/inventarioitem/"><i class="bi bi-box-seam-fill"></i><span>Inventario</span></a>
-      <a class="cg-nav-link" href="/admin/clientes/cliente/"><i class="bi bi-people-fill"></i><span>Clientes</span></a>
-      <a class="cg-nav-link" href="/admin/empleados/empleado/"><i class="bi bi-person-badge-fill"></i><span>Empleados</span></a>
+      <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'articulos' %}active{% endif %}" href="{% url 'gestion:lista' 'articulos' %}"><i class="bi bi-collection-play-fill"></i><span>Artículos</span></a>
+      <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'inventario' %}active{% endif %}" href="{% url 'gestion:lista' 'inventario' %}"><i class="bi bi-box-seam-fill"></i><span>Inventario</span></a>
+      <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'clientes' %}active{% endif %}" href="{% url 'gestion:lista' 'clientes' %}"><i class="bi bi-people-fill"></i><span>Clientes</span></a>
+      <a class="cg-nav-link {% if request.resolver_match.namespace == 'gestion' and request.resolver_match.kwargs.resource == 'empleados' %}active{% endif %}" href="{% url 'gestion:lista' 'empleados' %}"><i class="bi bi-person-badge-fill"></i><span>Empleados</span></a>
       <a class="cg-nav-link" href="/admin/"><i class="bi bi-gear-fill"></i><span>Administración</span></a>
     </nav>
 
     <div class="cg-sidebar-footer">
-      <div class="cg-user">
-        <div class="cg-user-avatar">{{ user.username|slice:":1"|upper }}</div>
-        <div>
-          <div class="fw-semibold text-white">{{ user.get_full_name|default:user.username }}</div>
-          <small class="text-secondary">Sesión activa</small>
-        </div>
-      </div>
-      <form method="post" action="{% url 'accounts:logout' %}">
-        {% csrf_token %}
-        <button class="btn btn-outline-light btn-sm w-100" type="submit"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</button>
-      </form>
+      <div class="cg-user"><div class="cg-user-avatar">{{ user.username|slice:":1"|upper }}</div><div><div class="fw-semibold text-white">{{ user.get_full_name|default:user.username }}</div><small class="text-secondary">Sesión activa</small></div></div>
+      <form method="post" action="{% url 'accounts:logout' %}">{% csrf_token %}<button class="btn btn-outline-light btn-sm w-100" type="submit"><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</button></form>
     </div>
   </aside>
 
   <div class="cg-main">
     <header class="cg-topbar">
-      <div>
-        <span class="text-secondary small">CineGest</span>
-        <span class="text-secondary small mx-2">/</span>
-        <strong class="small">{% block breadcrumb %}Dashboard{% endblock %}</strong>
-      </div>
-      <div class="cg-top-actions">
-        {% block top_actions %}{% endblock %}
-        <a class="cg-btn cg-btn-light d-none d-md-inline-flex align-items-center gap-2" href="/admin/">
-          <i class="bi bi-shield-lock"></i> Admin
-        </a>
-      </div>
+      <div><span class="text-secondary small">CineGest</span><span class="text-secondary small mx-2">/</span><strong class="small">{% block breadcrumb %}Dashboard{% endblock %}</strong></div>
+      <div class="cg-top-actions">{% block top_actions %}{% endblock %}<a class="cg-btn cg-btn-light d-none d-md-inline-flex align-items-center gap-2" href="/admin/"><i class="bi bi-shield-lock"></i> Admin</a></div>
     </header>
 
     <main class="cg-page">
-      {% if messages %}
-        {% for message in messages %}
-          <div class="alert alert-info border-0 shadow-sm rounded-4">{{ message }}</div>
-        {% endfor %}
-      {% endif %}
+      {% if messages %}{% for message in messages %}<div class="alert alert-info border-0 shadow-sm rounded-4">{{ message }}</div>{% endfor %}{% endif %}
       {% block content %}{% endblock %}
     </main>
   </div>
