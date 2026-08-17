@@ -1,17 +1,62 @@
 {% extends 'base.html' %}
 {% block title %}Reportes | CineGest{% endblock %}
+{% block breadcrumb %}Reportes{% endblock %}
+{% block top_actions %}
+<a class="cg-btn cg-btn-light d-inline-flex align-items-center gap-2" href="{% url 'reportes:excel' %}?{{ request.GET.urlencode }}"><i class="bi bi-file-earmark-excel"></i>Excel</a>
+<a class="cg-btn cg-btn-light d-inline-flex align-items-center gap-2" href="{% url 'reportes:pdf' %}?{{ request.GET.urlencode }}"><i class="bi bi-file-earmark-pdf"></i>PDF</a>
+{% endblock %}
 {% block content %}
-<div class="d-flex justify-content-between align-items-center mb-4">
-  <div><h1 class="h3 mb-1">Reportes de rentas</h1><p class="text-secondary mb-0">Consulta y exporta operaciones.</p></div>
-  <div class="d-flex gap-2"><a class="btn btn-success" href="{% url 'reportes:excel' %}?{{ request.GET.urlencode }}">Excel</a><a class="btn btn-danger" href="{% url 'reportes:pdf' %}?{{ request.GET.urlencode }}">PDF</a></div>
+<div class="mb-4">
+  <h1 class="cg-page-title h2">Reportes operativos</h1>
+  <p class="cg-page-subtitle">Analiza rentas por período y estado, y exporta la información cuando la necesites.</p>
 </div>
-<form method="get" class="card card-body shadow-sm mb-4">
-  <div class="row g-3">
-    <div class="col-md-3"><label class="form-label">Desde</label><input class="form-control" type="date" name="desde" value="{{ request.GET.desde }}"></div>
-    <div class="col-md-3"><label class="form-label">Hasta</label><input class="form-control" type="date" name="hasta" value="{{ request.GET.hasta }}"></div>
-    <div class="col-md-3"><label class="form-label">Estado</label><select class="form-select" name="estado"><option value="">Todos</option>{% for value,label in estados %}<option value="{{ value }}" {% if request.GET.estado == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>
-    <div class="col-md-3 d-flex align-items-end"><button class="btn btn-primary w-100" type="submit">Filtrar</button></div>
+
+<section class="cg-panel mb-4">
+  <div class="cg-panel-header">
+    <div>
+      <h2 class="cg-panel-title">Filtros</h2>
+      <small class="text-secondary">Refina los resultados del reporte</small>
+    </div>
+    <i class="bi bi-funnel text-secondary"></i>
   </div>
-</form>
-<div class="card shadow-sm"><div class="table-responsive"><table class="table table-hover mb-0"><thead><tr><th>#</th><th>Fecha</th><th>Cliente</th><th>Empleado</th><th>Estado</th><th>Total</th></tr></thead><tbody>{% for renta in rentas %}<tr><td>{{ renta.id }}</td><td>{{ renta.fecha_renta|date:'d/m/Y H:i' }}</td><td>{{ renta.cliente.nombre }}</td><td>{{ renta.empleado.nombre }}</td><td>{{ renta.get_estado_display }}</td><td>RD$ {{ renta.total|floatformat:2 }}</td></tr>{% empty %}<tr><td colspan="6" class="text-center py-4 text-secondary">Sin resultados.</td></tr>{% endfor %}</tbody></table></div></div>
+  <div class="cg-panel-body">
+    <form method="get">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-3"><label class="form-label fw-semibold">Desde</label><input class="form-control rounded-3" type="date" name="desde" value="{{ request.GET.desde }}"></div>
+        <div class="col-md-3"><label class="form-label fw-semibold">Hasta</label><input class="form-control rounded-3" type="date" name="hasta" value="{{ request.GET.hasta }}"></div>
+        <div class="col-md-3"><label class="form-label fw-semibold">Estado</label><select class="form-select rounded-3" name="estado"><option value="">Todos</option>{% for value,label in estados %}<option value="{{ value }}" {% if request.GET.estado == value %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></div>
+        <div class="col-md-3"><button class="cg-btn cg-btn-primary w-100" type="submit"><i class="bi bi-search me-2"></i>Aplicar filtros</button></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="cg-panel">
+  <div class="cg-panel-header">
+    <div>
+      <h2 class="cg-panel-title">Resultados</h2>
+      <small class="text-secondary">Operaciones que coinciden con los criterios seleccionados</small>
+    </div>
+    <span class="cg-badge cg-badge-blue">{{ rentas|length }} resultados</span>
+  </div>
+  <div class="table-responsive">
+    <table class="table cg-table align-middle">
+      <thead><tr><th>#</th><th>Fecha</th><th>Cliente</th><th>Empleado</th><th>Estado</th><th class="text-end">Total</th></tr></thead>
+      <tbody>
+      {% for renta in rentas %}
+        <tr>
+          <td class="fw-bold">#{{ renta.id }}</td>
+          <td>{{ renta.fecha_renta|date:'d/m/Y H:i' }}</td>
+          <td class="fw-semibold">{{ renta.cliente.nombre }}</td>
+          <td>{{ renta.empleado.nombre }}</td>
+          <td><span class="cg-badge {% if renta.estado == 'DEVUELTA' %}cg-badge-green{% elif renta.estado == 'ABIERTA' %}cg-badge-blue{% else %}cg-badge-yellow{% endif %}">{{ renta.get_estado_display }}</span></td>
+          <td class="text-end fw-bold">RD$ {{ renta.total|floatformat:2 }}</td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="6"><div class="cg-empty"><i class="bi bi-bar-chart"></i><strong>Sin resultados</strong><div class="small mt-1">Ajusta los filtros o registra nuevas operaciones.</div></div></td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
 {% endblock %}
