@@ -26,10 +26,10 @@ class RentaServiceTests(TestCase):
             monto_entrega_tardia=Decimal("25.00"),
         )
         self.item = InventarioItem.objects.create(articulo=self.articulo, codigo="TEST-001")
-        self.cliente = Cliente.objects.create(nombre="Cliente Prueba", documento="00100000001")
+        self.cliente = Cliente.objects.create(nombre="Cliente Prueba", documento="00000000018")
         self.empleado = Empleado.objects.create(
             nombre="Empleado Prueba",
-            cedula="00100000002",
+            cedula="00100000009",
             fecha_ingreso=date.today(),
         )
 
