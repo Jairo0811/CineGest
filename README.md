@@ -90,8 +90,8 @@ Esta relación **no representa continuidad por materias compartidas en ITLA**. F
 |---|---|---|---|
 | **Mario David Pichardo Vásquez** | A00114273 | **2015-2935** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
 | **Francis Jairo Matías Rosario** | A00115261 | **2015-2984** | ITLA → UNAPEC |
-| **Pieranyela José Carrasco Rodríguez** | A00116415 | **2019-8767** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
 | **Jenrry Monegro Rosario** | A00116621 | **2019-8690** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
+| **Pieranyela José Carrasco Rodríguez** | A00116415 | **2019-8767** | ITLA → UNAPEC; sin materias compartidas con Francis Jairo en ITLA |
 
 Este cruce permite documentar una dimensión distinta de la continuidad académica del portafolio: no la repetición de un profesor o compañero dentro de una misma institución, sino la convergencia posterior en UNAPEC de varios estudiantes con formación previa en ITLA. La coincidencia relevante ocurre en **CineGest (ISO-610, Enero - Abril 2026)**, no durante la etapa de Francis Jairo Matías Rosario en ITLA.
 
