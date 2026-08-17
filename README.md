@@ -67,6 +67,19 @@ Repositorio del proyecto académico original: [MDGreenCode/GestionVideoClub](htt
 | 📅 Período académico | Enero - Abril 2026 |
 | 📁 Tipo de entrega | Proyecto Final |
 
+## 🔗 Continuidad académica
+
+CineGest forma parte de una trayectoria académica conectada dentro de los proyectos de UNAPEC documentados en este portafolio.
+
+| Tipo de continuidad | Coincidencia | Proyecto relacionado |
+|---|---|---|
+| 👨‍🏫 Profesor recurrente | **Ing. Omar Antonio De Jesus De La Cruz Gonzalez** | [MediCore](https://github.com/Jairo0811/MediCore) — Desarrollo de Software con Tecnología Propietaria 1 (ISO-605) |
+| 📅 Mismo período académico | **Enero - Abril 2026** | CineGest e ISO-605 fueron cursadas durante el mismo cuatrimestre |
+
+Esto documenta una continuidad docente directa: durante **Enero - Abril de 2026**, Francis Jairo Matías Rosario desarrolló proyectos finales de **ISO-610** y **ISO-605** con el mismo profesor, trabajando en dos líneas complementarias del plan de estudios: tecnología open source y tecnología propietaria.
+
+> Para identificar continuidad entre compañeros se exige coincidencia inequívoca de **nombre y matrícula**. No se infieren relaciones únicamente por similitud de nombres o por una matrícula aislada.
+
 
 **Mario David Pichardo Vásquez** fue el principal creador y desarrollador de la versión original que sirve como punto de partida e inspiración para la evolución de **CineGest**.
 
