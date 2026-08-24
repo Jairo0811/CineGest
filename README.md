@@ -104,9 +104,12 @@ Dentro del equipo de CineGest existen trayectorias previas documentadas en el **
 
 | Integrante | Matrícula UNAPEC | Matrícula ITLA | Relación documentada |
 |---|---|---|---|
+| Mario David Pichardo Vásquez | A00114273 | No documentada en este repositorio | ITLA → UNAPEC; principal desarrollador del proyecto académico original |
 | Francis Jairo Matías Rosario | A00115261 | 2015-2984 | ITLA → UNAPEC |
 | Pieranyela José Carrasco Rodríguez | A00116415 | 2019-8767 | ITLA → UNAPEC; coincidencia previa en CertiChain |
 | Jenrry Monegro Rosario | A00116621 | 2019-8690 | ITLA → UNAPEC; coincidencia previa en CertiChain |
+
+La afiliación previa de **Mario David Pichardo Vásquez** al ITLA se conserva explícitamente. Su matrícula ITLA no está documentada en las fuentes disponibles de este repositorio, por lo que no se infiere ni se inventa.
 
 El cruce institucional documenta la trayectoria educativa previa de los integrantes; no implica que hayan cursado juntos una misma asignatura en ITLA.
 
