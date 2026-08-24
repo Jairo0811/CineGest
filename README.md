@@ -60,6 +60,56 @@ Repositorio académico original: **[MDGreenCode/GestionVideoClub](https://github
 | 📅 Período académico | Enero - Abril 2026 |
 | 📁 Tipo de entrega | Proyecto Final |
 
+## 🧭 Continuidad académica
+
+CineGest participa en varias relaciones académicas **verificables y distintas entre sí**. Se documentan por separado para no confundir recurrencia de estudiantes, continuidad docente y origen de los enunciados académicos.
+
+### 👥 Continuidad por estudiantes
+
+**Pieranyela José Carrasco Rodríguez (A00116415)** y **Jenrry Monegro Rosario (A00116621)** participaron primero en [**CertiChain**](https://github.com/Jairo0811/CertiChain), correspondiente a **Fundamentos de Seguridad de Software (ISO-915)** durante **Septiembre - Diciembre de 2025**, y volvieron a coincidir con Francis Jairo Matías Rosario en **CineGest (ISO-610)** durante **Enero - Abril de 2026**.
+
+| Orden | Asignatura | Proyecto | Período | Estudiantes recurrentes |
+|---:|---|---|---|---|
+| 1 | Fundamentos de Seguridad de Software (ISO-915) | [**CertiChain**](https://github.com/Jairo0811/CertiChain) | Septiembre - Diciembre 2025 | Pieranyela José Carrasco Rodríguez · Jenrry Monegro Rosario |
+| 2 | Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 | Pieranyela José Carrasco Rodríguez · Jenrry Monegro Rosario |
+
+La coincidencia queda respaldada por **nombre completo y matrícula** en ambos equipos académicos.
+
+### 👨‍🏫 Continuidad por profesor
+
+El profesor **Ing. Omar Antonio De Jesús De La Cruz González** impartió durante **Enero - Abril de 2026** dos asignaturas en las que se desarrollaron proyectos distintos de esta colección:
+
+| Asignatura | Proyecto | Período | Profesor |
+|---|---|---|---|
+| Desarrollo de Software con Tecnología Propietaria I (ISO-605) | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 | Ing. Omar Antonio De Jesús De La Cruz González |
+| Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 | Ing. Omar Antonio De Jesús De La Cruz González |
+
+Esta relación es docente y formativa; MediCore y CineGest son aplicaciones independientes.
+
+### 📚 Línea académica de Juan P. Valdez
+
+CineGest también pertenece a una línea documental de problemas de negocio propuestos como proyectos finales por **Juan P. Valdez** en 2020:
+
+| Enunciado académico | Evolución en el portafolio | Relación |
+|---|---|---|
+| Dispensario Médico de UNAPEC | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enunciado de Proyecto Final elaborado por Juan P. Valdez |
+| Sistema de Video Club | **CineGest** | Enunciado de Proyecto Final elaborado por Juan P. Valdez |
+| Sistema de Rentcar | [**RentCarRD**](https://github.com/Jairo0811/RentCarRD) | Enunciado de Proyecto Final elaborado por Juan P. Valdez |
+
+Esta línea representa **continuidad por origen del enunciado**, no necesariamente por profesor efectivo de cada asignatura.
+
+### 🏫 Cruce institucional ITLA → UNAPEC
+
+Dentro del equipo de CineGest existen trayectorias previas documentadas en el **Instituto Tecnológico de Las Américas (ITLA)** antes de coincidir en UNAPEC:
+
+| Integrante | Matrícula UNAPEC | Matrícula ITLA | Relación documentada |
+|---|---|---|---|
+| Francis Jairo Matías Rosario | A00115261 | 2015-2984 | ITLA → UNAPEC |
+| Pieranyela José Carrasco Rodríguez | A00116415 | 2019-8767 | ITLA → UNAPEC; coincidencia previa en CertiChain |
+| Jenrry Monegro Rosario | A00116621 | 2019-8690 | ITLA → UNAPEC; coincidencia previa en CertiChain |
+
+El cruce institucional documenta la trayectoria educativa previa de los integrantes; no implica que hayan cursado juntos una misma asignatura en ITLA.
+
 ---
 
 # 🛠️ Stack tecnológico
