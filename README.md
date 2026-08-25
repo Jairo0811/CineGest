@@ -68,10 +68,10 @@ CineGest participa en varias relaciones académicas **verificables y distintas e
 
 **Pieranyela José Carrasco Rodríguez (A00116415)** y **Jenrry Monegro Rosario (A00116621)** participaron primero en [**CertiChain**](https://github.com/Jairo0811/CertiChain), correspondiente a **Fundamentos de Seguridad de Software (ISO-915)** durante **Septiembre - Diciembre de 2025**, y volvieron a coincidir con Francis Jairo Matías Rosario en **CineGest (ISO-610)** durante **Enero - Abril de 2026**.
 
-| Orden | Asignatura | Proyecto | Período | Estudiantes recurrentes |
-|---:|---|---|---|---|
-| 1 | Fundamentos de Seguridad de Software (ISO-915) | [**CertiChain**](https://github.com/Jairo0811/CertiChain) | Septiembre - Diciembre 2025 | Pieranyela José Carrasco Rodríguez · Jenrry Monegro Rosario |
-| 2 | Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 | Pieranyela José Carrasco Rodríguez · Jenrry Monegro Rosario |
+| Orden | Asignatura | Proyecto | Período |
+|---:|---|---|---|
+| 1 | Fundamentos de Seguridad de Software (ISO-915) | [**CertiChain**](https://github.com/Jairo0811/CertiChain) | Septiembre - Diciembre 2025 |
+| 2 | Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 |
 
 La coincidencia queda respaldada por **nombre completo y matrícula** en ambos equipos académicos.
 
@@ -79,22 +79,22 @@ La coincidencia queda respaldada por **nombre completo y matrícula** en ambos e
 
 El profesor **Ing. Omar Antonio De Jesús De La Cruz González** impartió durante **Enero - Abril de 2026** dos asignaturas en las que se desarrollaron proyectos distintos de esta colección:
 
-| Asignatura | Proyecto | Período | Profesor |
-|---|---|---|---|
-| Desarrollo de Software con Tecnología Propietaria I (ISO-605) | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 | Ing. Omar Antonio De Jesús De La Cruz González |
-| Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 | Ing. Omar Antonio De Jesús De La Cruz González |
+| Orden | Asignatura | Proyecto | Período |
+|---:|---|---|---|
+| 1 | Desarrollo de Software con Tecnología Propietaria I (ISO-605) | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enero - Abril 2026 |
+| 2 | Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 |
 
 Esta relación es docente y formativa; MediCore y CineGest son aplicaciones independientes.
 
-### 📚 Línea académica de Juan P. Valdez
+### 📚 Línea académica de Juan Pablo Valdez Reyes
 
-CineGest también pertenece a una línea documental de problemas de negocio propuestos como proyectos finales por **Juan P. Valdez** en 2020:
+CineGest también pertenece a una línea documental de problemas de negocio propuestos como proyectos finales por **Juan Pablo Valdez Reyes** en 2020:
 
 | Enunciado académico | Evolución en el portafolio | Relación |
 |---|---|---|
-| Dispensario Médico de UNAPEC | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enunciado de Proyecto Final elaborado por Juan P. Valdez |
-| Sistema de Video Club | **CineGest** | Enunciado de Proyecto Final elaborado por Juan P. Valdez |
-| Sistema de Rentcar | [**RentCarRD**](https://github.com/Jairo0811/RentCarRD) | Enunciado de Proyecto Final elaborado por Juan P. Valdez |
+| Dispensario Médico de UNAPEC | [**MediCore**](https://github.com/Jairo0811/MediCore) | Enunciado de Proyecto Final elaborado por Juan Pablo Valdez Reyes |
+| Sistema de Video Club | **CineGest** | Enunciado de Proyecto Final elaborado por Juan Pablo Valdez Reyes |
+| Sistema de Rentcar | [**RentCarRD**](https://github.com/Jairo0811/RentCarRD) | Enunciado de Proyecto Final elaborado por Juan Pablo Valdez Reyes |
 
 Esta línea representa **continuidad por origen del enunciado**, no necesariamente por profesor efectivo de cada asignatura.
 
