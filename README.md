@@ -42,11 +42,11 @@ Repositorio académico original: **[MDGreenCode/GestionVideoClub](https://github
 
 | Integrante | Matrícula |
 |---|---|
-| Carlos Jesús Bobea Mejía | A00091229 |
-| Mario David Pichardo Vásquez | A00114273 |
-| Francis Jairo Matías Rosario | A00115261 |
-| Pieranyela José Carrasco Rodríguez | A00116415 |
-| Jenrry Monegro Rosario | A00116621 |
+| 👨🏻‍💻 Carlos Jesús Bobea Mejía | A00091229 |
+| 👨🏻‍💻 Mario David Pichardo Vásquez | A00114273 |
+| 👨🏻‍💻 Francis Jairo Matías Rosario | A00115261 |
+| 👩🏻‍💻 Pieranyela José Carrasco Rodríguez | A00116415 |
+| 👨🏻‍💻 Jenrry Monegro Rosario | A00116621 |
 
 **Mario David Pichardo Vásquez** fue el principal creador y desarrollador del proyecto académico original que sirve como referencia para esta evolución.
 
