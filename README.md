@@ -66,14 +66,15 @@ CineGest participa en varias relaciones académicas **verificables y distintas e
 
 ### 👥 Continuidad por estudiantes
 
-**Pieranyela José Carrasco Rodríguez (A00116415)** y **Jenrry Monegro Rosario (A00116621)** participaron primero en [**CertiChain**](https://github.com/Jairo0811/CertiChain), correspondiente a **Fundamentos de Seguridad de Software (ISO-915)** durante **Septiembre - Diciembre de 2025**, y volvieron a coincidir con Francis Jairo Matías Rosario en **CineGest (ISO-610)** durante **Enero - Abril de 2026**.
+**Pieranyela José Carrasco Rodríguez (A00116415)** y **Jenrry Monegro Rosario (A00116621)** coincidieron con Francis Jairo Matías Rosario en dos proyectos distintos durante **Septiembre - Diciembre de 2025**: [**CertiChain**](https://github.com/Jairo0811/CertiChain), correspondiente a **Fundamentos de Seguridad de Software (ISO-915)**, y [**AccessiUX Market**](https://github.com/Jairo0811/AccessiUX-Market), originado en **Ingeniería de la Usabilidad (ISO-505)**. Posteriormente, ambos volvieron a coincidir con Francis en **CineGest (ISO-610)** durante **Enero - Abril de 2026**.
 
 | Orden | Asignatura | Proyecto | Período |
 |---:|---|---|---|
 | 1 | Fundamentos de Seguridad de Software (ISO-915) | [**CertiChain**](https://github.com/Jairo0811/CertiChain) | Septiembre - Diciembre 2025 |
-| 2 | Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 |
+| 2 | Ingeniería de la Usabilidad (ISO-505) | [**AccessiUX Market**](https://github.com/Jairo0811/AccessiUX-Market) | Septiembre - Diciembre 2025 |
+| 3 | Desarrollo de Software con Tecnología Open Source I (ISO-610) | **CineGest** | Enero - Abril 2026 |
 
-La coincidencia queda respaldada por **nombre completo y matrícula** en ambos equipos académicos.
+La coincidencia queda respaldada por **nombre completo y matrícula** en los equipos académicos de los tres proyectos. Esta relación es formativa y cronológica; no implica dependencia técnica entre las aplicaciones.
 
 ### 👨‍🏫 Continuidad por profesor
 
@@ -106,8 +107,8 @@ Dentro del equipo de CineGest existen trayectorias previas documentadas en el **
 |---|---|---|---|
 | Mario David Pichardo Vásquez | A00114273 | 2015-2935 | ITLA → UNAPEC; principal desarrollador del proyecto académico original |
 | Francis Jairo Matías Rosario | A00115261 | 2015-2984 | ITLA → UNAPEC |
-| Pieranyela José Carrasco Rodríguez | A00116415 | 2019-8767 | ITLA → UNAPEC; coincidencia previa en CertiChain |
-| Jenrry Monegro Rosario | A00116621 | 2019-8690 | ITLA → UNAPEC; coincidencia previa en CertiChain |
+| Pieranyela José Carrasco Rodríguez | A00116415 | 2019-8767 | ITLA → UNAPEC; coincidencia previa en CertiChain y AccessiUX Market |
+| Jenrry Monegro Rosario | A00116621 | 2019-8690 | ITLA → UNAPEC; coincidencia previa en CertiChain y AccessiUX Market |
 
 El cruce institucional documenta la trayectoria educativa previa de los integrantes; no implica que hayan cursado juntos una misma asignatura en ITLA.
 
@@ -117,20 +118,20 @@ El cruce institucional documenta la trayectoria educativa previa de los integran
 
 ### 🐍 Backend y Framework
 
-<p align="center">
+<p>
   <img src="https://skillicons.dev/icons?i=python,django" alt="Python y Django" />
   <img src="https://img.shields.io/badge/Django%20ORM-Persistencia-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django ORM" />
 </p>
 
 ### 🎨 Frontend y UI
 
-<p align="center">
+<p>
   <img src="https://skillicons.dev/icons?i=html,css,bootstrap" alt="HTML, CSS y Bootstrap" />
 </p>
 
 ### 🗄️ Datos y Persistencia
 
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/SQLite-Desarrollo-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
   <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-Producción-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="Microsoft SQL Server" />
   <img src="https://img.shields.io/badge/mssql--django-SQL%20Server-092E20?style=for-the-badge&logo=django&logoColor=white" alt="mssql-django" />
@@ -139,7 +140,7 @@ El cruce institucional documenta la trayectoria educativa previa de los integran
 
 ### 📊 Reportes y Archivos
 
-<p align="center">
+<p>
   <img src="https://img.shields.io/badge/OpenPyXL-Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="OpenPyXL" />
   <img src="https://img.shields.io/badge/ReportLab-PDF-C62828?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="ReportLab" />
   <img src="https://img.shields.io/badge/WhiteNoise-Static%20Files-4B5563?style=for-the-badge" alt="WhiteNoise" />
@@ -147,7 +148,7 @@ El cruce institucional documenta la trayectoria educativa previa de los integran
 
 ### 🧪 Calidad y DevOps
 
-<p align="center">
+<p>
   <img src="https://skillicons.dev/icons?i=docker,git,github,githubactions,vscode" alt="Docker, Git, GitHub, GitHub Actions y Visual Studio Code" />
 </p>
 
