@@ -115,8 +115,40 @@ El cruce institucional documenta la trayectoria educativa previa de los integran
 
 # 🛠️ Stack tecnológico
 
+### 🐍 Backend y Framework
+
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,django,html,css,bootstrap,vscode,git,github,docker&perline=9" />
+  <img src="https://skillicons.dev/icons?i=python,django" alt="Python y Django" />
+  <img src="https://img.shields.io/badge/Django%20ORM-Persistencia-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django ORM" />
+</p>
+
+### 🎨 Frontend y UI
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,bootstrap" alt="HTML, CSS y Bootstrap" />
+</p>
+
+### 🗄️ Datos y Persistencia
+
+<p align="center">
+  <img src="https://img.shields.io/badge/SQLite-Desarrollo-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-Producción-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="Microsoft SQL Server" />
+  <img src="https://img.shields.io/badge/mssql--django-SQL%20Server-092E20?style=for-the-badge&logo=django&logoColor=white" alt="mssql-django" />
+  <img src="https://img.shields.io/badge/pyodbc-ODBC-4B8BBE?style=for-the-badge" alt="pyodbc" />
+</p>
+
+### 📊 Reportes y Archivos
+
+<p align="center">
+  <img src="https://img.shields.io/badge/OpenPyXL-Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="OpenPyXL" />
+  <img src="https://img.shields.io/badge/ReportLab-PDF-C62828?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="ReportLab" />
+  <img src="https://img.shields.io/badge/WhiteNoise-Static%20Files-4B5563?style=for-the-badge" alt="WhiteNoise" />
+</p>
+
+### 🧪 Calidad y DevOps
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=docker,git,github,githubactions,vscode" alt="Docker, Git, GitHub, GitHub Actions y Visual Studio Code" />
 </p>
 
 | Tecnología | Uso |
