@@ -3,14 +3,40 @@
 import os
 from pathlib import Path
 
+from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(BASE_DIR / ".env")
 
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-dev-only-change-me")
-DEBUG = os.getenv("DJANGO_DEBUG", "True").lower() in {"1", "true", "yes", "on"}
-ALLOWED_HOSTS = [host.strip() for host in os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if host.strip()]
+
+def _env_bool(name, default=False):
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    return raw.lower() in {"1", "true", "yes", "on"}
+
+
+def _env_list(name, default=""):
+    return [value.strip() for value in os.getenv(name, default).split(",") if value.strip()]
+
+
+DEV_SECRET_KEY = "django-insecure-dev-only-change-me"
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", DEV_SECRET_KEY)
+DEBUG = _env_bool("DJANGO_DEBUG", True)
+ALLOWED_HOSTS = _env_list("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost")
+CSRF_TRUSTED_ORIGINS = _env_list("DJANGO_CSRF_TRUSTED_ORIGINS")
+
+if not DEBUG:
+    if SECRET_KEY in {DEV_SECRET_KEY, "change-me"} or len(SECRET_KEY) < 32:
+        raise ImproperlyConfigured(
+            "DJANGO_SECRET_KEY debe configurarse con un valor robusto antes de ejecutar CineGest en producción."
+        )
+    if not ALLOWED_HOSTS:
+        raise ImproperlyConfigured(
+            "DJANGO_ALLOWED_HOSTS debe contener al menos un host cuando DJANGO_DEBUG=False."
+        )
+
 CEDULA_LUHN_EXCEPTION_HASHES = tuple(
     value.strip().lower()
     for value in os.getenv("CEDULA_LUHN_EXCEPTION_HASHES", "").split(",")
@@ -119,10 +145,17 @@ LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "accounts:login"
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SECURE_SSL_REDIRECT = _env_bool("DJANGO_SECURE_SSL_REDIRECT", not DEBUG)
 SESSION_COOKIE_SECURE = not DEBUG
+SESSION_COOKIE_HTTPONLY = True
+SESSION_COOKIE_SAMESITE = "Lax"
 CSRF_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SAMESITE = "Lax"
 SECURE_HSTS_SECONDS = 31536000 if not DEBUG else 0
 SECURE_HSTS_INCLUDE_SUBDOMAINS = not DEBUG
 SECURE_HSTS_PRELOAD = not DEBUG
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+X_FRAME_OPTIONS = "DENY"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
