@@ -65,6 +65,7 @@ jobs:
       DB_PORT: 1433
       DB_DRIVER: ODBC Driver 18 for SQL Server
       DB_EXTRA_PARAMS: TrustServerCertificate=yes;Encrypt=yes
+      DB_CREATE_IF_MISSING: "True"
       DJANGO_SECRET_KEY: cinegest-ci-production-validation-secret-key-2026
       DJANGO_DEBUG: "True"
       DJANGO_ALLOWED_HOSTS: 127.0.0.1,localhost
