@@ -18,6 +18,12 @@
   <img src="https://img.shields.io/badge/SQL%20Server-Preparado-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/Jairo0811/CineGest/actions/workflows/ci.yml">
+    <img src="https://github.com/Jairo0811/CineGest/actions/workflows/ci.yml/badge.svg" alt="CineGest CI">
+  </a>
+</p>
+
 ---
 
 ## 📖 Descripción
