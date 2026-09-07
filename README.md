@@ -20,7 +20,7 @@
 
 ---
 
-# 📖 Descripción
+## 📖 Descripción
 
 **CineGest** es un sistema web para administrar las operaciones principales de un Video Club desde una interfaz centralizada.
 
@@ -30,7 +30,7 @@ El sistema mantiene el **Django Admin** como consola técnica para tareas avanza
 
 ---
 
-# 🎓 Origen académico
+## 🎓 Origen académico
 
 CineGest forma parte de una colección de proyectos académicos desarrollados en la **Universidad APEC (UNAPEC)**, tomando como referencia el listado de proyectos propuestos por el profesor **Juan Pablo Valdez Reyes**.
 
@@ -38,9 +38,19 @@ La versión académica original fue realizada durante el **primer cuatrimestre d
 
 Repositorio académico original: **[MDGreenCode/GestionVideoClub](https://github.com/MDGreenCode/GestionVideoClub)**.
 
-## 👥 Equipo académico original
+### 🎓 Información académica
 
-| Integrante | Matrícula |
+| Información | Detalle |
+|---|---|
+| 📖 Asignatura | Desarrollo de Software con Tecnología Open Source I (ISO-610) |
+| 👨‍🏫 Profesor | Ing. Omar Antonio De Jesús De La Cruz González |
+| 🏫 Institución | Universidad APEC (UNAPEC) |
+| 📅 Período académico | Enero - Abril 2026 |
+| 📁 Tipo de entrega | Proyecto Final |
+
+### 👥 Equipo académico original
+
+| 👤 Integrante | 🆔 Matrícula |
 |---|---|
 | 👨🏻‍💻 Carlos Jesús Bobea Mejía | A00091229 |
 | 👨🏻‍💻 Mario David Pichardo Vásquez | A00114273 |
@@ -50,15 +60,7 @@ Repositorio académico original: **[MDGreenCode/GestionVideoClub](https://github
 
 **Mario David Pichardo Vásquez** fue el principal creador y desarrollador del proyecto académico original que sirve como referencia para esta evolución.
 
-## 🎓 Información académica
-
-| Información | Detalle |
-|---|---|
-| 📖 Asignatura | Desarrollo de Software con Tecnología Open Source I (ISO-610) |
-| 👨‍🏫 Profesor | Ing. Omar Antonio De Jesús De La Cruz González |
-| 🏫 Institución | Universidad APEC (UNAPEC) |
-| 📅 Período académico | Enero - Abril 2026 |
-| 📁 Tipo de entrega | Proyecto Final |
+---
 
 ## 🧭 Continuidad académica
 
@@ -114,7 +116,7 @@ El cruce institucional documenta la trayectoria educativa previa de los integran
 
 ---
 
-# 🛠️ Stack tecnológico
+## 🧱 Stack tecnológico
 
 ### 🐍 Backend y Framework
 
@@ -171,7 +173,7 @@ El cruce institucional documenta la trayectoria educativa previa de los integran
 
 ---
 
-# 🏗️ Arquitectura
+## 🏗️ Arquitectura
 
 ```text
 Navegador
@@ -209,29 +211,29 @@ Las operaciones críticas de renta y devolución se encapsulan en servicios tran
 
 ---
 
-# ✨ Funcionalidades
+## ✨ Funcionalidades
 
-## 📊 Dashboard ejecutivo
+### 📊 Dashboard ejecutivo
 - KPIs de clientes, empleados, artículos, disponibilidad, rentas abiertas y recargos.
 - Últimas rentas.
 - Ranking de artículos más rentados.
 - Accesos rápidos a las operaciones principales.
 
-## 👥 Gestión operativa
+### 👥 Gestión operativa
 - Clientes.
 - Empleados.
 - Artículos.
 - Inventario por unidades físicas.
 - Búsqueda y edición desde la interfaz propia de CineGest.
 
-## 🎬 Catálogos y artículos
+### 🎬 Catálogos y artículos
 - Tipos de artículos.
 - Géneros.
 - Idiomas.
 - Personas de elenco y participación por artículo.
 - Múltiples géneros y personas de elenco por artículo.
 
-## 🔑 Rentas y devoluciones
+### 🔑 Rentas y devoluciones
 - Rentas con múltiples unidades de inventario.
 - Bloqueo automático de unidades rentadas.
 - Devoluciones parciales y totales.
@@ -239,12 +241,12 @@ Las operaciones críticas de renta y devolución se encapsulan en servicios tran
 - Cálculo de recargos por retraso.
 - Historial de operaciones.
 
-## 📄 Reportes
+### 📄 Reportes
 - Filtros por rango de fechas y estado.
 - Exportación a Excel.
 - Exportación a PDF.
 
-## 🔐 Seguridad
+### 🔐 Seguridad
 - Usuario personalizado de Django.
 - Login y logout.
 - Control mediante permisos y grupos.
@@ -254,7 +256,7 @@ Las operaciones críticas de renta y devolución se encapsulan en servicios tran
 
 ---
 
-# 🎨 Identidad visual
+## 🎨 Identidad visual
 
 La interfaz utiliza la paleta oficial de CineGest inspirada en los colores azul y amarillo del proyecto:
 
@@ -271,7 +273,7 @@ static/images/cinegest-logo.png
 
 ---
 
-# 📂 Estructura principal
+## 📂 Estructura principal
 
 ```text
 CineGest/
@@ -294,31 +296,31 @@ CineGest/
 
 ---
 
-# 🚀 Instalación local
+## 🚀 Instalación local
 
-## 1. Clonar
+### 1. Clonar
 
 ```bash
 git clone https://github.com/Jairo0811/CineGest.git
 cd CineGest
 ```
 
-## 2. Crear y activar entorno virtual
+### 2. Crear y activar entorno virtual
 
-### Windows PowerShell
+#### Windows PowerShell
 
 ```powershell
 py -3.13 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-## 3. Instalar dependencias
+### 3. Instalar dependencias
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-## 4. Variables de entorno
+### 4. Variables de entorno
 
 ```powershell
 Copy-Item .env.example .env
@@ -330,19 +332,19 @@ Para desarrollo local con SQLite:
 DATABASE_ENGINE=sqlite
 ```
 
-## 5. Migraciones
+### 5. Migraciones
 
 ```powershell
 python manage.py migrate
 ```
 
-## 6. Crear administrador
+### 6. Crear administrador
 
 ```powershell
 python manage.py createsuperuser
 ```
 
-## 7. Ejecutar
+### 7. Ejecutar
 
 ```powershell
 python manage.py runserver
@@ -362,7 +364,7 @@ http://127.0.0.1:8000/admin/
 
 ---
 
-# 🛢️ Microsoft SQL Server
+## 🛢️ Microsoft SQL Server
 
 La configuración se controla desde `.env`:
 
@@ -381,7 +383,7 @@ La guía detallada está disponible en `docs/sql-server-setup.md`.
 
 ---
 
-# 🧪 Calidad
+## 🧪 Calidad
 
 Validación recomendada antes de integrar cambios:
 
@@ -397,7 +399,7 @@ La suite actual incluye pruebas automatizadas para validaciones y flujo de renta
 
 ---
 
-# 🐳 Docker
+## 🐳 Docker
 
 ```bash
 docker compose up --build
@@ -407,7 +409,7 @@ El repositorio incluye configuración de Docker y SQL Server 2022 para preparar 
 
 ---
 
-# 📊 Estado del proyecto
+## 📊 Estado del proyecto
 
 | Área | Estado |
 |---|:---:|
@@ -428,7 +430,7 @@ El repositorio incluye configuración de Docker y SQL Server 2022 para preparar 
 
 ---
 
-# 👨‍💻 Evolución y mantenimiento
+## 👨‍💻 Evolución y mantenimiento
 
 **Francis Jairo Matías Rosario**  
 Universidad APEC (UNAPEC) · Ingeniería de Software  
