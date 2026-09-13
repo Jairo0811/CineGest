@@ -8,7 +8,7 @@ La Fase 7 cierra CineGest como entrega profesional de portafolio sobre la base f
 - Resolver deuda técnica en el módulo de reportes.
 - Endurecer la configuración de producción.
 - Ampliar la cobertura automatizada de los endpoints de reportes.
-- Dejar definido el criterio de cierre para `v1.0.0`.
+- Dejar definido y cumplido el criterio de cierre para `v1.0.0`.
 
 ## 1. Corrección crítica de reportes
 
@@ -27,7 +27,7 @@ El cambio elimina lógica de presentación y generación de archivos del control
 
 ## 2. Validación SQL Server en CI
 
-GitHub Actions ejecuta ahora dos trabajos independientes:
+GitHub Actions ejecuta dos trabajos independientes:
 
 1. `SQLite validation`
    - migraciones;
@@ -45,7 +45,7 @@ GitHub Actions ejecuta ahora dos trabajos independientes:
    - suite completa sobre SQL Server;
    - `django check --deploy` con configuración de producción.
 
-Esta validación sustituye el estado anterior de «SQL Server preparado, validación física pendiente» por una comprobación reproducible en CI.
+Esta validación sustituyó el estado anterior de «SQL Server preparado, validación física pendiente» por una comprobación reproducible en CI.
 
 ## 3. Hardening de producción
 
@@ -75,15 +75,16 @@ La suite de reportes valida:
 - generación XLSX válida;
 - generación PDF válida.
 
-## 5. Criterio de cierre de `v1.0.0`
+## 5. Cierre de `v1.0.0`
 
-La versión `v1.0.0` puede declararse estable cuando el PR de esta fase cumpla simultáneamente:
+Los criterios de cierre quedaron cumplidos:
 
-- CI SQLite verde;
-- CI SQL Server 2022 verde;
-- `check --deploy` sin errores bloqueantes;
-- ausencia de marcadores de conflicto en código versionado;
-- documentación de despliegue actualizada;
-- PR fusionado a `main`.
+- ✅ CI SQLite verde;
+- ✅ CI SQL Server 2022 verde;
+- ✅ `check --deploy` sin errores bloqueantes;
+- ✅ ausencia de marcadores de conflicto en código versionado;
+- ✅ documentación de despliegue actualizada;
+- ✅ Fase 7 fusionada a `main`;
+- ✅ Django 5.2 LTS actualizado al patch de seguridad `5.2.17` antes del congelamiento final.
 
-Después de este cierre, CineGest se considera un proyecto académico/profesional terminado y mantenido principalmente con fines de portafolio, correcciones y actualizaciones de seguridad.
+CineGest queda considerado un proyecto académico/profesional terminado. La línea base `v1.0.0` se congela para nuevas funcionalidades y se mantendrá únicamente mediante correcciones necesarias, mantenimiento técnico y actualizaciones de seguridad.
