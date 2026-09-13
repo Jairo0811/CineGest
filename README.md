@@ -12,10 +12,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Estado-Validación%20v1.0.0-FFC400?style=flat-square&logo=github" alt="Estado" />
-  <img src="https://img.shields.io/badge/Django-5.2.15-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/Estado-Estable%20v1.0.0-2E7D32?style=flat-square&logo=github" alt="Estado" />
+  <img src="https://img.shields.io/badge/Django-5.2.17-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" />
   <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/SQL%20Server-Preparado-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
+  <img src="https://img.shields.io/badge/SQL%20Server%202022-Validado-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@
 
 **CineGest** es un sistema web para administrar las operaciones principales de un Video Club desde una interfaz centralizada.
 
-La versión actual fue reconstruida con **Python y Django** sobre una arquitectura modular, incorporando una interfaz propia con identidad visual azul y amarilla, autenticación, inventario por unidades, rentas con múltiples artículos, devoluciones parciales o totales, recargos, reportes PDF/Excel y preparación para Microsoft SQL Server y despliegue con Docker.
+La versión estable fue reconstruida con **Python y Django** sobre una arquitectura modular, incorporando una interfaz propia con identidad visual azul y amarilla, autenticación, inventario por unidades, rentas con múltiples artículos, devoluciones parciales o totales, recargos, reportes PDF/Excel y validación reproducible sobre Microsoft SQL Server 2022 mediante GitHub Actions.
 
 El sistema mantiene el **Django Admin** como consola técnica para tareas avanzadas, mientras que las operaciones habituales se realizan desde las pantallas propias de CineGest.
 
@@ -163,13 +163,13 @@ El cruce institucional documenta la trayectoria educativa previa de los integran
 | Tecnología | Uso |
 |---|---|
 | 🐍 Python 3.13 | Lenguaje principal |
-| 🎯 Django 5.2.15 | Framework web |
+| 🎯 Django 5.2.17 LTS | Framework web |
 | 🧩 Django ORM | Persistencia y modelo de dominio |
 | 🌐 HTML5 | Templates y estructura visual |
 | 🎨 CSS3 | Sistema visual de CineGest |
 | 🅱️ Bootstrap 5 | Componentes responsivos |
 | 💾 SQLite | Base local de desarrollo |
-| 🛢️ Microsoft SQL Server | Base de datos preparada para producción |
+| 🛢️ Microsoft SQL Server 2022 | Base de datos validada en CI para el perfil profesional |
 | 🔌 `mssql-django` + `pyodbc` | Conectividad con SQL Server |
 | 📊 OpenPyXL | Exportación a Excel |
 | 📄 ReportLab | Reportes PDF |
@@ -194,7 +194,7 @@ Views / Forms / Services
 Modelos de dominio + Django ORM
    │
    ├── SQLite (desarrollo)
-   └── Microsoft SQL Server (objetivo de producción)
+   └── Microsoft SQL Server 2022 (integración validada en CI)
 ```
 
 CineGest sigue el patrón **MVT de Django** y separa responsabilidades por aplicaciones:
@@ -401,7 +401,7 @@ python manage.py test
 python manage.py collectstatic --noinput
 ```
 
-La suite actual incluye pruebas automatizadas para validaciones y flujo de rentas/devoluciones, y GitHub Actions ejecuta las comprobaciones principales en cada cambio relevante.
+La suite actual contiene **19 pruebas automatizadas**. GitHub Actions valida cada cambio relevante tanto con SQLite como con Microsoft SQL Server 2022 e incluye `python manage.py check --deploy` en la ruta de integración profesional.
 
 ---
 
@@ -411,7 +411,7 @@ La suite actual incluye pruebas automatizadas para validaciones y flujo de renta
 docker compose up --build
 ```
 
-El repositorio incluye configuración de Docker y SQL Server 2022 para preparar entornos reproducibles de despliegue.
+El repositorio incluye Docker y SQL Server 2022 para entornos reproducibles de ejecución y validación.
 
 ---
 
@@ -431,8 +431,9 @@ El repositorio incluye configuración de Docker y SQL Server 2022 para preparar 
 | CI / pruebas | ✅ |
 | Docker | ✅ |
 | Configuración SQL Server | ✅ |
-| Validación física final sobre SQL Server | 🚧 |
-| Release `v1.0.0` | 🚧 |
+| Validación SQL Server 2022 | ✅ |
+| Línea base `v1.0.0` | ✅ |
+| Desarrollo de nuevas funcionalidades | 🧊 Congelado |
 
 ---
 
@@ -442,7 +443,7 @@ El repositorio incluye configuración de Docker y SQL Server 2022 para preparar 
 Universidad APEC (UNAPEC) · Ingeniería de Software  
 Matrícula: **A00115261**
 
-CineGest se mantiene como evolución independiente del trabajo académico original, con objetivos de portafolio profesional y preparación para un posible uso real.
+CineGest se mantiene como evolución independiente del trabajo académico original. La línea base `v1.0.0` queda congelada para nuevas funcionalidades; a partir de este punto, el repositorio se reserva para correcciones necesarias, mantenimiento técnico y actualizaciones de seguridad.
 
 ---
 
