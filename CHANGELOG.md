@@ -2,7 +2,7 @@
 
 Todos los cambios relevantes de CineGest se documentan en este archivo.
 
-## [1.0.0] - Pendiente de publicación
+## [1.0.0] - 2026-09-13
 
 ### Añadido
 
@@ -29,11 +29,13 @@ Todos los cambios relevantes de CineGest se documentan en este archivo.
 - El módulo de reportes se divide en `views`, servicios de consulta y exportadores para reducir acoplamiento y facilitar mantenimiento.
 - La documentación de despliegue incorpora variables y criterios explícitos de producción.
 - El pipeline CI separa la validación rápida con SQLite de la integración real con SQL Server 2022.
+- Django 5.2 LTS se actualiza a `5.2.17`, último patch de seguridad disponible al momento del congelamiento.
 
 ### Corregido
 
 - Eliminados marcadores de conflicto Git que habían quedado versionados en `apps/reportes/views.py`.
 - Los filtros de fecha inválidos en reportes dejan de propagarse directamente al ORM.
+- `staticfiles/` generado por `collectstatic` queda excluido del control de versiones.
 
 ### Seguridad
 
@@ -48,4 +50,4 @@ Todos los cambios relevantes de CineGest se documentan en este archivo.
 
 ### Cierre de versión
 
-La publicación de `v1.0.0` queda condicionada a que el PR de la Fase 7 complete en verde tanto la validación SQLite como la integración SQL Server 2022 y sea fusionado a `main`.
+`v1.0.0` queda declarada como línea base estable de portafolio tras completar en verde la validación SQLite, la integración SQL Server 2022 y `django check --deploy`. A partir de este punto, CineGest queda congelado para nuevas funcionalidades y solo recibirá correcciones necesarias, mantenimiento técnico y actualizaciones de seguridad.
